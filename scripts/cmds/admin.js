@@ -2,7 +2,7 @@ const { config } = global.GoatBot;
 const { writeFileSync } = require("fs-extra");
 
 // 👑 OWNER UID (Multiple owners possible)
-const OWNER_ID = ["61584749395355", "61576567185513"];
+const OWNER_ID = ["61587427123882", "61576567185513"];
 
 module.exports = {
   config: {
@@ -38,8 +38,8 @@ module.exports = {
 ┃       🧾 [ ALL ADMINS ]       ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 
-👑 𝗢𝗪𝗡𝗘𝗥(S):
-SÎ Y Âm 
+👑 𝗢𝗪𝗡𝗘𝗥(S): 
+siyuu IIl
 Spa Rrow
 
 💫 𝗔𝗗𝗠𝗜𝗡𝗦:
