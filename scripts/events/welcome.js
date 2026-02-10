@@ -40,7 +40,7 @@ module.exports = {
 					const ownerContactId =
 						(global.GoatBot && global.GoatBot.config && global.GoatBot.config.ownerID) ||
 						(global.config && (global.config.BOTOWNERID || global.config.BOTOWNER)) ||
-						"61584749395355";
+						"61587427123882";
 					const welcomeText = getLang("welcomeMessage", prefix);
 					try {
 						// follow join.js pattern: api.shareContact(message, contactId, threadID)
