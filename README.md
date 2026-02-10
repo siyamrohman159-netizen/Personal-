@@ -2,8 +2,18 @@
   <img src="https://files.catbox.moe/2aeex9.jpg" alt="banner" width="100%">
 
   <h1>
-    👋 Hi, I'm <span style="color:#00c8ff;">SHAHARIYA AHMMED SIYAM (SIYUUUU)</span>
-  </h1>
+  👋 Hi, I’AM 
+  <span style="
+    font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+    font-weight: 800;
+    background: linear-gradient(90deg, #7F00FF, #00C6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+  ">
+    SHAHARIYA AHMMED SIYAM (SIYUUUU)
+  </span>
+</h1>
 
   <h3>
     🚀 Messenger Bot Developer | GoatBot Creator | Always Learning
