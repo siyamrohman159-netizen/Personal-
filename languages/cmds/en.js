@@ -722,5 +722,7 @@ ytb: {
 		noAudio: "❌ | Sorry, no audio was found with a size less than 26MB",
 		info: "💠 | Title: %1\n🏪 | Channel: %2\n👨‍👩‍👧‍👦 | Subscriber: %3\n⏱ | Video time: %4\n👀 | View: %5\n👍 | Like: %6\n🆙 | Upload date: %7\n🔠 | ID: %8\n🔗 | Link: %9",
 		listChapter: "\n📖 | List chapter: %1\n"
+	  	}
 	}
-}
+};
+
