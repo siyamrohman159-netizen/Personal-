@@ -497,3 +497,154 @@ module.exports = {
 		guide: {
 			body: "   {pn} <nick name>: change nickname of yourself\n   {pn} @tags <nick name>: change nickname of members tagged\n   {pn} all <nick name>: change nickname of all members in chat\n\nWith available shortcuts:\n   + {userName}: name of member\n   + {userID}: ID of member\n\n   Example: (see image)",
 			attachment: {
+				[`${process.cwd()}/scripts/cmds/assets/guide/setname_1.png`]: "https://i.ibb.co/gFh23zb/guide1.png",
+				[`${process.cwd()}/scripts/cmds/assets/guide/setname_2.png`]: "https://i.ibb.co/BNWHKgj/guide2.png"
+			}
+		},
+		text: {
+			error: "An error has occurred, try turning off the invite link feature in the group and try again later"
+		}
+	},
+	setrole: {
+		description: "Edit role of command (commands with role < 2)",
+		guide: "   {pn} <commandName> <new role>: set new role for command\n   With:\n   + <commandName>: command name\n   + <new role>: new role of command with:\n   + <new role> = 0: command can be used by all members in group\n   + <new role> = 1: command can be used by admin only\n   + <new role> = default: reset role of command to default\n   Example:\n    {pn} rank 1: (command rank can be used by admin only)\n    {pn} rank 0: (command rank can be used by all members in group)\n    {pn} rank default: reset to default\n—————\n   {pn} [viewrole|view|show]: view role of edited commands",
+		text: {
+			noEditedCommand: "✅ Your group has no edited command",
+			editedCommand: "⚠️ Your group has edited commands:\n",
+			noPermission: "❗ Only admin can use this command",
+			commandNotFound: "Command \"%1\" not found",
+			noChangeRole: "❗ Can't change role of command \"%1\"",
+			resetRole: "Reset role of command \"%1\" to default",
+			changedRole: "Changed role of command \"%1\" to %2"
+		}
+	},
+	setwelcome: {
+		description: "Edit welcome message content when new member join your group chat",
+		guide: {
+			body: "   {pn} text [<content> | reset]: edit text content or reset to default, with some shortcuts:\n  + {userName}: new member name\n  + {userNameTag}: new member name (tag)\n  + {boxName}:  group chat name\n  + {multiple}: you || you guys\n  + {session}:  session in day\n\n   Example:\n    {pn} text Hello {userName}, welcome to {boxName}, have a nice day {multiple}\n\n   Reply (phản hồi) or send a message with file with content {pn} file: to add file attachments to welcome message (image, video, audio)\n\n   Example:\n    {pn} file reset: delete file attachments",
+			attachment: {
+				[`${process.cwd()}/scripts/cmds/assets/guide/setwelcome/setwelcome_en_1.png`]: "https://i.ibb.co/vsCz0ks/setwelcome-en-1.png"
+			}
+		},
+		text: {
+			missingContent: "Please enter welcome message content",
+			edited: "Edited welcome message content of your group to: %1",
+			reseted: "Reseted welcome message content",
+			noFile: "No file attachments to delete",
+			resetedFile: "Reseted file attachments successfully",
+			missingFile: "Please reply this message with image/video/audio file",
+			addedFile: "Added %1 file attachments to your group welcome message"
+		}
+	},
+	shortcut: {
+		description: "Add a shortcut for your message in group chat",
+		text: {
+			missingContent: 'Please enter the message content',
+			shortcutExists: 'Shortcut "%1" already exists, react to this message to replace the content of the shortcut',
+			shortcutExistsByOther: 'Shortcut %1 has been added by other member, please try another keyword',
+			added: 'Added shortcut %1 => %2',
+			addedAttachment: ' with %1 attachment(s)',
+			missingKey: 'Please enter the keyword of the shortcut you want to delete',
+			notFound: 'No shortcut found for keyword %1 in your group chat',
+			onlyAdmin: 'Only administrators can delete other people\'s shortcuts',
+			deleted: 'Deleted shortcut %1',
+			empty: 'Your group chat has not added any shortcuts',
+			message: 'Message',
+			attachment: 'Attachment',
+			list: 'Your shortcuts list',
+			onlyAdminRemoveAll: 'Only administrators can remove all shortcuts in the group chat',
+			confirmRemoveAll: 'Are you sure you want to remove all shortcuts in this group chat? (react to this message to confirm)',
+			removedAll: 'Removed all shortcuts in your group chat'
+		}
+	},
+	simsimi: {
+		description: "Chat with simsimi",
+		guide: "   {pn} [on | off]: turn on/off simsimi\n\n   {pn} <word>: chat with simsimi\n   Example:\n    {pn} hi",
+		text: {
+			turnedOn: "Turned on simsimi successfully!",
+			turnedOff: "Turned off simsimi successfully!",
+			chatting: "Chatting with simsimi...",
+			error: "Simsimi is busy, please try again later"
+		}
+	},
+	sorthelp: {
+		description: "Sort help list",
+		guide: "{pn} [name | category]",
+		text: {
+			savedName: "Saved sort help list by name",
+			savedCategory: "Saved sort help list by category"
+		}
+	},
+	thread: {
+		description: "Manage group chat in bot system",
+		guide: "   {pn} [find | -f | search | -s] <name to find>: search group chat in bot data by name\n   {pn} [find | -f | search | -s] [-j | joined] <name to find>: search group chat in bot data that bot still joined by name\n   {pn} [ban | -b] [<tid> | leave blank] <reason>: use to ban group with id <tid> or current group using bot\n   Example:\n    {pn} ban 3950898668362484 spam bot\n    {pn} ban spam too much\n    {pn} unban [<tid> | leave blank] to unban group with id <tid> or current group",
+		text: {
+			noPermission: "You don't have permission to use this feature",
+			found: "🔎 Found %1 group matching the keyword \"%3\" in bot data:\n%3",
+			notFound: "❌ No group found matching the keyword: \"%1\" in bot data",
+			hasBanned: "Group with id [%1 | %2] has been banned before:\n» Reason: %3\n» Time: %4",
+			banned: "Banned group with id [%1 | %2] using bot.\n» Reason: %3\n» Time: %4",
+			notBanned: "Group with id [%1 | %2] is not banned using bot",
+			unbanned: "Unbanned group with tid [%1 | %2] using bot",
+			missingReason: "Ban reason cannot be empty",
+			info: "» Box ID: %1\n» Name: %2\n» Date created data: %3\n» Total members: %4\n» Boy: %5 members\n» Girl: %6 members\n» Total messages: %7%8"
+		}
+	},
+	tid: {
+		description: "View threadID of your group chat",
+		guide: "{pn}"
+	},
+	tik: {
+		description: "Download video/slide (image), audio from tiktok link",
+		guide: "   {pn} [video|-v|v] <url>: use to download video/slide (image) from tiktok link.\n   {pn} [audio|-a|a] <url>: use to download audio from tiktok link",
+		text: {
+			invalidUrl: "Please enter a valid tiktok url",
+			downloadingVideo: "Downloading video: %1...",
+			downloadedSlide: "Downloaded slide: %1\n%2",
+			downloadedVideo: "Downloaded video: %1\nDownload Url: %2",
+			downloadingAudio: "Downloading audio: %1...",
+			downloadedAudio: "Downloaded audio: %1"
+		}
+	},
+	trigger: {
+		description: "Trigger image",
+		guide: "{pn} [@tag | empty]"
+	},
+	uid: {
+		description: "View facebook user id of user",
+		guide: "   {pn}: use to view your facebook user id\n   {pn} @tag: view facebook user id of tagged people\n   {pn} <profile link>: view facebook user id of profile link",
+		text: {
+			syntaxError: "Please tag the person you want to view uid or leave it blank to view your own uid"
+		}
+	},
+	unsend: {
+		description: "Unsend bot's message",
+		guide: "reply the message you want to unsend and call the command {pn}",
+		text: {
+			syntaxError: "Please reply the message you want to unsend"
+		}
+	},
+	user: {
+		description: "Manage users in bot system",
+		guide: "   {pn} [find | -f | search | -s] <name to find>: search for users in bot data by name\n\n   {pn} [ban | -b] [<uid> | @tag | reply message] <reason>: to ban user with id <uid> or tagged user or sender of message replied using bot\n\n   {pn} unban [<uid> | @tag | reply message]: to unban user using bot",
+		text: {
+			noUserFound: "❌ No user found with name matching keyword: \"%1\" in bot data",
+			userFound: "🔎 Found %1 user with name matching keyword \"%2\" in bot data:\n%3",
+			uidRequired: "Uid of user to ban cannot be empty, please enter uid or tag or reply message of 1 user by user ban <uid> <reason>",
+			reasonRequired: "Reason to ban user cannot be empty, please enter uid or tag or reply message of 1 user by user ban <uid> <reason>",
+			userHasBanned: "User with id [%1 | %2] has been banned before:\n» Reason: %3\n» Date: %4",
+			userBanned: "User with id [%1 | %2] has been banned:\n» Reason: %3\n» Date: %4",
+			uidRequiredUnban: "Uid of user to unban cannot be empty",
+			userNotBanned: "User with id [%1 | %2] is not banned",
+			userUnbanned: "User with id [%1 | %2] has been unbanned"
+		}
+	},
+	videofb: {
+		description: "Download video/story from facebook (public)",
+		guide: "   {pn} <url video/story>: tải video từ facebook",
+		text: {
+			missingUrl: "Please enter the facebook video/story (public) url you want to download",
+			error: "An error occurred while downloading the video",
+			downloading: "Downloading video for you",
+			tooLarge: "Sorry, we can't download the video for you because the size is larger than 83MB"
+			}
