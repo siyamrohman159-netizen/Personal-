@@ -4,454 +4,475 @@ module.exports = {
 		description: "turn on/off only admin box can use bot",
 		guide: "   {pn} [on | off]",
 		text: {
-			turnedOn: "Turned on the mode only admin of group can use bot",
-			turnedOff: "Turned off the mode only admin of group can use bot",
+			turnedOn: "Tυʀɴ Oɴ Oɴʟʏ Gʀᴏυᴘ Aᴅᴍɪɴ Mᴏᴅᴇ ⚙️🔒",
+			turnedOff: "Tυʀɴ Oғғ — Nᴏᴡ Eᴠᴇʀʏᴏɴᴇ Cᴀɴ Uꜱᴇ Iᴛ⚙️🔓",
 			syntaxError: "Syntax error, only use {pn} on or {pn} off"
 		}
 	},
 	adduser: {
-		description: "Add user to box chat of you",
-		guide: "   {pn} [link profile | uid]",
-		text: {
-			alreadyInGroup: "Already in group",
-			successAdd: "- Successfully added %1 members to the group",
-			failedAdd: "- Failed to add %1 members to the group",
-			approve: "- Added %1 members to the approval list",
-			invalidLink: "Please enter a valid facebook link",
-			cannotGetUid: "Cannot get uid of this user",
-			linkNotExist: "This profile url does not exist",
-			cannotAddUser: "Bot is blocked or this user blocked strangers from adding to the group"
-		}
-	},
+	adduser: {
+	'description': "AԀԀ υsᴇʀ ᴛᴏ ʙox cʜᴀᴛ oғ γoυ ➕👤",
+	'guide': "   {pn} [ʟɪɴᴋ ᴘʀᴏғɪʟᴇ 🔗 | ᴜɪᴅ 🆔]",
+	'text': {
+		'alreadyInGroup': "Aʟʀᴇᴀᴅʏ ɪɴ ɢʀᴏυᴘ ✅",
+		'successAdd': "- Sᴜᴄᴄᴇssғᴜʟʟʏ aԀԀᴇᴅ %1 mᴇᴍʙᴇʀs ᴛᴏ ᴛʜᴇ ɢʀᴏυᴘ 🎉",
+		'failedAdd': "- Fᴀɪʟᴇᴅ ᴛᴏ aԀԀ %1 mᴇᴍʙᴇʀs ᴛᴏ ᴛʜᴇ ɢʀᴏυᴘ ❌",
+		'approve': "- AԀԀᴇᴅ %1 mᴇᴍʙᴇʀs ᴛᴏ ᴛʜᴇ aᴘᴘʀᴏᴠᴀʟ ʟɪsᴛ 📝",
+		'invalidLink': "Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ a ᴠᴀʟɪᴅ ғᴀᴄᴇʙᴏᴏᴋ ʟɪɴᴋ 🔗",
+		'cannotGetUid': "Cᴀɴɴᴏᴛ ɢᴇᴛ ᴜɪᴅ oғ ᴛʜɪs υsᴇʀ 🆔",
+		'linkNotExist': "Tʜɪs ᴘʀᴏғɪʟᴇ υʀʟ ᴅᴏᴇs ɴᴏᴛ ᴇxɪsᴛ ❌",
+		'cannotAddUser': "Bᴏᴛ ɪs ʙʟᴏᴄᴋᴇᴅ 🚫 oʀ ᴛʜɪs υsᴇʀ ʙʟᴏᴄᴋᴇᴅ sᴛʀᴀɴɢᴇʀs ғʀᴏᴍ aԀԀɪɴɢ ᴛᴏ ᴛʜᴇ ɢʀᴏυᴘ 🔒"
+	}
+},
+		
 	admin: {
-		description: "Add, remove, edit admin role",
-		guide: "   {pn} [add | -a] <uid>: Add admin role for user\n\t  {pn} [remove | -r] <uid>: Remove admin role of user\n\t  {pn} [list | -l]: List all admins",
-		text: {
-			added: "✅ | Added admin role for %1 users:\n%2",
-			alreadyAdmin: "\n⚠️ | %1 users already have admin role:\n%2",
-			missingIdAdd: "⚠️ | Please enter ID or tag user to add admin role",
-			removed: "✅ | Removed admin role of %1 users:\n%2",
-			notAdmin: "⚠️ | %1 users don't have admin role:\n%2",
-			missingIdRemove: "⚠️ | Please enter ID or tag user to remove admin role",
-			listAdmin: "👑 | List of admins:\n%1"
-		}
-	},
-	adminonly: {
-		description: "turn on/off only admin can use bot",
-		guide: "{pn} [on | off]",
-		text: {
-			turnedOn: "Turned on the mode only admin can use bot",
-			turnedOff: "Turned off the mode only admin can use bot",
-			syntaxError: "Syntax error, only use {pn} on or {pn} off"
-		}
-	},
+	'description': "AԀԀ, ʀᴇᴍᴏᴠᴇ, ᴇᴅɪᴛ ᴀᴅᴍɪɴ ʀᴏʟᴇ 👑",
+	'guide': "   {pn} [aԀԀ | -a] <ᴜɪᴅ> ➕ AԀԀ ᴀᴅᴍɪɴ ʀᴏʟᴇ ғᴏʀ υsᴇʀ\n\t  {pn} [ʀᴇᴍᴏᴠᴇ | -r] <ᴜɪᴅ> ➖ Rᴇᴍᴏᴠᴇ ᴀᴅᴍɪɴ ʀᴏʟᴇ oғ υsᴇʀ\n\t  {pn} [ʟɪsᴛ | -l] 📋 Lɪsᴛ ᴀʟʟ ᴀᴅᴍɪɴs",
+	'text': {
+		'added': "✅ | AԀԀᴇᴅ ᴀᴅᴍɪɴ ʀᴏʟᴇ ғᴏʀ %1 υsᴇʀs:\n%2",
+		'alreadyAdmin': "\n⚠️ | %1 υsᴇʀs ᴀʟʀᴇᴀᴅʏ ʜᴀᴠᴇ ᴀᴅᴍɪɴ ʀᴏʟᴇ:\n%2",
+		'missingIdAdd': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴜɪᴅ oʀ ᴛᴀɢ υsᴇʀ ᴛᴏ aԀԀ ᴀᴅᴍɪɴ ʀᴏʟᴇ",
+		'removed': "✅ | Rᴇᴍᴏᴠᴇᴅ ᴀᴅᴍɪɴ ʀᴏʟᴇ oғ %1 υsᴇʀs:\n%2",
+		'notAdmin': "⚠️ | %1 υsᴇʀs ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀᴅᴍɪɴ ʀᴏʟᴇ:\n%2",
+		'missingIdRemove': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴜɪᴅ oʀ ᴛᴀɢ υsᴇʀ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴀᴅᴍɪɴ ʀᴏʟᴇ",
+		'listAdmin': "👑 | Lɪsᴛ oғ ᴀᴅᴍɪɴs:\n%1"
+	}
+},
+	
+		adminonly: {
+	'description': "Tυʀɴ Oɴ/Oғғ — Oɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ υsᴇ ʙᴏᴛ 🔒",
+	'guide': "{pn} [oɴ | oғғ] ⚙️",
+	'text': {
+		'turnedOn': "✅ | Tυʀɴᴇᴅ oɴ — Oɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ υsᴇ ʙᴏᴛ",
+		'turnedOff': "❎ | Tυʀɴᴇᴅ oғғ — Nᴏᴡ ᴇᴠᴇʀʏᴏɴᴇ ᴄᴀɴ υsᴇ ʙᴏᴛ",
+		'syntaxError': "⚠️ | Sʏɴᴛᴀx ᴇʀʀᴏʀ — Oɴʟʏ υsᴇ {pn} oɴ oʀ {pn} oғғ"
+	}
+},
 	all: {
-		description: "Tag all members in your group chat",
-		guide: "{pn} [content | empty]"
-	},
-	anime: {
-		description: "random anime image",
-		guide: "{pn} <endpoint>\n   List of endpoint: neko, kitsune, hug, pat, waifu, cry, kiss, slap, smug, punch",
-		text: {
-			loading: "Initializing image, please wait...",
-			error: "An error occurred, please try again later"
-		}
-	},
+	'description': "Tᴀɢ ᴀʟʟ mᴇᴍʙᴇʀs ɪɴ γoυʀ ɢʀᴏυᴘ cʜᴀᴛ 📌",
+	'guide': "{pn} [cᴏɴᴛᴇɴᴛ | ᴇᴍᴘᴛʏ] ⚡"
+},
+
+anime: {
+	'description': "Rᴀɴᴅᴏᴍ ᴀɴɪᴍᴇ ɪᴍᴀɢᴇ 🎌",
+	'guide': "{pn} <ᴇɴᴅᴘᴏɪɴᴛ>\n   Lɪsᴛ oғ ᴇɴᴅᴘᴏɪɴᴛs: ɴᴇᴋᴏ, ᴋɪᴛsᴜɴᴇ, ʜᴜɢ, ᴘᴀᴛ, ᴡᴀɪғᴜ, ᴄʀʏ, ᴋɪss, sʟᴀᴘ, sᴍᴜɢ, ᴘᴜɴᴄʜ",
+	'text': {
+		'loading': "⏳ | ɪɴɪᴛɪᴀʟɪᴢɪɴɢ ɪᴍᴀɢᴇ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...",
+		'error': "❌ | Aɴ ᴇʀʀᴏʀ oᴄᴄᴜʀʀᴇᴅ, ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ"
+	}
+},
 	antichangeinfobox: {
-		description: "Turn on/off anti change info box",
-		guide: "   {pn} avt [on | off]: anti change avatar box chat\n   {pn} name [on | off]: anti change name box chat\n   {pn} theme [on | off]: anti change theme (chủ đề) box chat\n   {pn} emoji [on | off]: anti change emoji box chat",
-		text: {
-			antiChangeAvatarOn: "Turn on anti change avatar box chat",
-			antiChangeAvatarOff: "Turn off anti change avatar box chat",
-			missingAvt: "You have not set avatar for box chat",
-			antiChangeNameOn: "Turn on anti change name box chat",
-			antiChangeNameOff: "Turn off anti change name box chat",
-			antiChangeThemeOn: "Turn on anti change theme box chat",
-			antiChangeThemeOff: "Turn off anti change theme box chat",
-			antiChangeEmojiOn: "Turn on anti change emoji box chat",
-			antiChangeEmojiOff: "Turn off anti change emoji box chat",
-			antiChangeAvatarAlreadyOn: "Your box chat is currently on anti change avatar",
-			antiChangeNameAlreadyOn: "Your box chat is currently on anti change name",
-			antiChangeThemeAlreadyOn: "Your box chat is currently on anti change theme",
-			antiChangeEmojiAlreadyOn: "Your box chat is currently on anti change emoji"
-		}
-	},
+	'description': "Tυʀɴ Oɴ/Oғғ — Aɴᴛɪ Cʜᴀɴɢᴇ ɪɴғᴏ ʙᴏx 🔒",
+	'guide': "   {pn} ᴀᴠᴛ [oɴ | oғғ] ➕ Aɴᴛɪ Cʜᴀɴɢᴇ ᴀᴠᴀᴛᴀʀ ʙᴏx cʜᴀᴛ\n   {pn} ɴᴀᴍᴇ [oɴ | oғғ] ✏️ Aɴᴛɪ Cʜᴀɴɢᴇ ɴᴀᴍᴇ ʙᴏx cʜᴀᴛ\n   {pn} ᴛʜᴇᴍᴇ [oɴ | oғғ] 🎨 Aɴᴛɪ Cʜᴀɴɢᴇ ᴛʜᴇᴍᴇ (ᴄʜủ ᴅề) ʙᴏx cʜᴀᴛ\n   {pn} ᴇᴍᴏᴊɪ [oɴ | oғғ] 😎 Aɴᴛɪ Cʜᴀɴɢᴇ ᴇᴍᴏᴊɪ ʙᴏx cʜᴀᴛ",
+	'text': {
+		'antiChangeAvatarOn': "✅ | Tυʀɴᴇᴅ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ᴀᴠᴀᴛᴀʀ ʙᴏx cʜᴀᴛ",
+		'antiChangeAvatarOff': "❎ | Tυʀɴᴇᴅ oғғ Aɴᴛɪ Cʜᴀɴɢᴇ ᴀᴠᴀᴛᴀʀ ʙᴏx cʜᴀᴛ",
+		'missingAvt': "⚠️ | Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ sᴇᴛ ᴀᴠᴀᴛᴀʀ ғᴏʀ ʙᴏx cʜᴀᴛ",
+		'antiChangeNameOn': "✅ | Tυʀɴᴇᴅ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ɴᴀᴍᴇ ʙᴏx cʜᴀᴛ",
+		'antiChangeNameOff': "❎ | Tυʀɴᴇᴅ oғғ Aɴᴛɪ Cʜᴀɴɢᴇ ɴᴀᴍᴇ ʙᴏx cʜᴀᴛ",
+		'antiChangeThemeOn': "✅ | Tυʀɴᴇᴅ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ᴛʜᴇᴍᴇ ʙᴏx cʜᴀᴛ",
+		'antiChangeThemeOff': "❎ | Tυʀɴᴇᴅ oғғ Aɴᴛɪ Cʜᴀɴɢᴇ ᴛʜᴇᴍᴇ ʙᴏx cʜᴀᴛ",
+		'antiChangeEmojiOn': "✅ | Tυʀɴᴇᴅ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ᴇᴍᴏᴊɪ ʙᴏx cʜᴀᴛ",
+		'antiChangeEmojiOff': "❎ | Tυʀɴᴇᴅ oғғ Aɴᴛɪ Cʜᴀɴɢᴇ ᴇᴍᴏᴊɪ ʙᴏx cʜᴀᴛ",
+		'antiChangeAvatarAlreadyOn': "⚠️ | Yᴏᴜʀ ʙᴏx cʜᴀᴛ ɪs cᴜʀʀᴇɴᴛʟʏ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ᴀᴠᴀᴛᴀʀ",
+		'antiChangeNameAlreadyOn': "⚠️ | Yᴏᴜʀ ʙᴏx cʜᴀᴛ ɪs cᴜʀʀᴇɴᴛʟʏ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ɴᴀᴍᴇ",
+		'antiChangeThemeAlreadyOn': "⚠️ | Yᴏᴜʀ ʙᴏx cʜᴀᴛ ɪs cᴜʀʀᴇɴᴛʟʏ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ᴛʜᴇᴍᴇ",
+		'antiChangeEmojiAlreadyOn': "⚠️ | Yᴏᴜʀ ʙᴏx cʜᴀᴛ ɪs cᴜʀʀᴇɴᴛʟʏ oɴ Aɴᴛɪ Cʜᴀɴɢᴇ ᴇᴍᴏᴊɪ"
+	}
+},
 	appstore: {
-		description: "Search app on appstore",
-		text: {
-			missingKeyword: "You haven't entered any keyword",
-			noResult: "No result found for keyword %1"
-		}
-	},
-	autosetname: {
-		description: "Auto change nickname of new member",
-		guide: "   {pn} set <nickname>: use to set config to auto change nickname, with some shortcuts:\n   + {userName}: name of new member\n   + {userID}: member id\n   Example:\n    {pn} set {userName} 🚀\n\n   {pn} [on | off]: use to turn on/off this feature\n\n   {pn} [view | info]: show current config",
-		text: {
-			missingConfig: "Please enter the required configuration",
-			configSuccess: "The configuration has been set successfully",
-			currentConfig: "The current autoSetName configuration in your chat group is:\n%1",
-			notSetConfig: "Your group has not set the autoSetName configuration",
-			syntaxError: "Syntax error, only \"{pn} on\" or \"{pn} off\" can be used",
-			turnOnSuccess: "The autoSetName feature has been turned on",
-			turnOffSuccess: "The autoSetName feature has been turned off",
-			error: "An error occurred while using the autoSetName feature, try turning off the invite link feature in the group and try again later"
-		}
-	},
+	'description': "Sᴇᴀʀᴄʜ ᴀᴘᴘ ᴏɴ ᴀᴘᴘsᴛᴏʀᴇ 📱",
+	'text': {
+		'missingKeyword': "⚠️ | Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴇɴᴛᴇʀᴇᴅ ᴀɴʏ ᴋᴇʏᴡᴏʀᴅ",
+		'noResult': "❌ | Nᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ ғᴏʀ ᴋᴇʏᴡᴏʀᴅ %1"
+	}
+},
+
+autosetname: {
+	'description': "Aᴜᴛᴏ ᴄʜᴀɴɢᴇ ɴɪᴄᴋɴᴀᴍᴇ oғ ɴᴇᴡ mᴇᴍʙᴇʀ ✏️",
+	'guide': "   {pn} sᴇᴛ <ɴɪᴄᴋɴᴀᴍᴇ> 🚀: ᴜsᴇ ᴛᴏ sᴇᴛ ᴄᴏɴғɪɢ ᴛᴏ aᴜᴛᴏ ᴄʜᴀɴɢᴇ ɴɪᴄᴋɴᴀᴍᴇ, wɪᴛʜ sᴏᴍᴇ sʜᴏʀᴛᴄᴜᴛs:\n   + {userName} 🧑: ɴᴀᴍᴇ oғ ɴᴇᴡ mᴇᴍʙᴇʀ\n   + {userID} 🆔: mᴇᴍʙᴇʀ ɪᴅ\n   Eхᴀᴍᴘʟᴇ:\n    {pn} sᴇᴛ {userName} 🚀\n\n   {pn} [oɴ | oғғ] ⚡: ᴛᴜʀɴ oɴ/oғғ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ\n\n   {pn} [vɪᴇᴡ | ɪɴғᴏ] 📋: sʜᴏᴡ ᴄᴜʀʀᴇɴᴛ ᴄᴏɴғɪɢ",
+	'text': {
+		'missingConfig': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ʀᴇǫᴜɪʀᴇᴅ ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ",
+		'configSuccess': "✅ | Tʜᴇ ᴄᴏɴғɪɢᴜʀᴀᴛɪᴏɴ ʜᴀs ʙᴇᴇɴ sᴇᴛ sᴜᴄᴄᴇssғᴜʟʟʏ",
+		'currentConfig': "ℹ️ | Tʜᴇ cᴜʀʀᴇɴᴛ aᴜᴛᴏSᴇᴛNᴀᴍᴇ ᴄᴏɴғɪɢ ɪɴ γoυʀ ᴄʜᴀᴛ ɢʀᴏυᴘ ɪs:\n%1",
+		'notSetConfig': "⚠️ | Yᴏᴜʀ ɢʀᴏυᴘ ʜᴀs ɴᴏᴛ sᴇᴛ ᴛʜᴇ aᴜᴛᴏSᴇᴛNᴀᴍᴇ ᴄᴏɴғɪɢ",
+		'syntaxError': "❌ | Sʏɴᴛᴀx ᴇʀʀᴏʀ — Oɴʟʏ \"{pn} oɴ\" oʀ \"{pn} oғғ\" ᴄᴀɴ ʙᴇ υsᴇᴅ",
+		'turnOnSuccess': "✅ | Tʜᴇ aᴜᴛᴏSᴇᴛNᴀᴍᴇ ғᴇᴀᴛᴜʀᴇ ʜᴀs ʙᴇᴇɴ tυʀɴᴇᴅ oɴ",
+		'turnOffSuccess': "❎ | Tʜᴇ aᴜᴛᴏSᴇᴛNᴀᴍᴇ ғᴇᴀᴛᴜʀᴇ ʜᴀs ʙᴇᴇɴ tυʀɴᴇᴅ oғғ",
+		'error': "⚠️ | Aɴ ᴇʀʀᴏʀ oᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ υsɪɴɢ aᴜᴛᴏSᴇᴛNᴀᴍᴇ, ᴛʀʏ tυʀɴɪɴɢ oғғ ᴛʜᴇ ɪɴᴠɪᴛᴇ ʟɪɴᴋ ғᴇᴀᴛᴜʀᴇ ɪɴ ᴛʜᴇ ɢʀᴏυᴘ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ"
+	}
+},
 	avatar: {
-		description: "create anime avatar with signature",
-		guide: "{p}{n} <character id or character name> | <background text> | <signature> | <background color name or hex color>\n{p}{n} help: view how to use this command",
-		text: {
-			initImage: "Initializing image, please wait...",
-			invalidCharacter: "Currently there are only %1 characters on the system, please enter a character id less than",
-			notFoundCharacter: "No character named %1 was found in the character list",
-			errorGetCharacter: "An error occurred while getting character data:\n%1: %2",
-			success: "✅ Your avatar\nCharacter: %1\nID: %2\nBackground text: %3\nSignature: %4\nColor: %5",
-			defaultColor: "default",
-			error: "An error occurred\n%1: %2"
-		}
-	},
-	badwords: {
-		description: "Turn on/off/add/remove bad words warning, if a member violates, he will be warned, the second time he will be kicked out of the chat box",
-		guide: "   {pn} add <words>: add banned words (you can add multiple words separated by commas \",\" or vertical bars \"|\")\n   {pn} delete <words>: delete banned words (you can delete multiple words separated by commas \",\" or vertical bars \"|\")\n   {pn} list <hide | leave blank>: turn off warning (add \"hide\" to hide banned words)\n   {pn} unwarn [<userID> | <@tag>]: remove 1 warning of 1 member\n   {pn} on: turn off warning\n   {pn} off: turn on warning",
-		text: {
-			onText: "on",
-			offText: "off",
-			onlyAdmin: "⚠️ | Only admins can add banned words to the list",
-			missingWords: "⚠️ | You haven't entered the banned words",
-			addedSuccess: "✅ | Added %1 banned words to the list",
-			alreadyExist: "❌ | %1 banned words already exist in the list before: %2",
-			tooShort: "⚠️ | %1 banned words cannot be added to the list because they are shorter than 2 characters: %2",
-			onlyAdmin2: "⚠️ | Only admins can delete banned words from the list",
-			missingWords2: "⚠️ | You haven't entered the words to delete",
-			deletedSuccess: "✅ | Deleted %1 banned words from the list",
-			notExist: "❌ | %1 banned words do not exist in the list before: %2",
-			emptyList: "⚠️ | The list of banned words in your group is currently empty",
-			badWordsList: "📑 | The list of banned words in your group: %1",
-			onlyAdmin3: "⚠️ | Only admins can %1 this feature",
-			turnedOnOrOff: "✅ | Banned words warning has been %1",
-			onlyAdmin4: "⚠️ | Only admins can delete banned words warning",
-			missingTarget: "⚠️ | You haven't entered user ID or tagged user",
-			notWarned: "⚠️ | User %1 has not been warned for banned words",
-			removedWarn: "✅ | User %1 | %2 has been removed 1 banned words warning",
-			warned: "⚠️ | Banned words \"%1\" have been detected in your message, if you continue to violate you will be kicked from the group.",
-			warned2: "⚠️ | Banned words \"%1\" have been detected in your message, you have violated 2 times and will be kicked from the group.",
-			needAdmin: "Bot needs admin privileges to kick banned members",
-			unwarned: "✅ | Removed banned words warning of user %1 | %2"
-		}
-	},
-	balance: {
-		description: "view your money or the money of the tagged person",
-		guide: "   {pn}: view your money\n   {pn} <@tag>: view the money of the tagged person",
-		text: {
-			money: "You have %1$",
-			moneyOf: "%1 has %2$"
-		}
-	},
-	batslap: {
-		description: "Batslap image",
-		text: {
-			noTag: "You must tag the person you want to slap"
-		}
-	},
+	'description': "Cʀᴇᴀᴛᴇ ᴀɴɪᴍᴇ ᴀᴠᴀᴛᴀʀ wɪᴛʜ sɪɢɴᴀᴛᴜʀᴇ ✏️🎨",
+	'guide': "{p}{n} <ᴄʜᴀʀᴀᴄᴛᴇʀ ɪᴅ oʀ ɴᴀᴍᴇ> | <ʙᴀᴄᴋɢʀᴏᴜɴᴅ ᴛᴇxᴛ> | <sɪɢɴᴀᴛᴜʀᴇ> | <ʙᴀᴄᴋɢʀᴏᴜɴᴅ ᴄᴏʟᴏʀ ɴᴀᴍᴇ oʀ ʜᴇx ᴄᴏʟᴏʀ>\n{p}{n} help ℹ️: vɪᴇᴡ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜɪs cᴏᴍᴍᴀɴᴅ",
+	'text': {
+		'initImage': "⏳ | ɪɴɪᴛɪᴀʟɪᴢɪɴɢ ɪᴍᴀɢᴇ, ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...",
+		'invalidCharacter': "⚠️ | Cᴜʀʀᴇɴᴛʟʏ ᴛʜᴇʀᴇ ᴀʀᴇ ᴏɴʟʏ %1 ᴄʜᴀʀᴀᴄᴛᴇʀs ɪɴ ᴛʜᴇ sʏsᴛᴇᴍ, ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴀ ᴄʜᴀʀᴀᴄᴛᴇʀ ɪᴅ ʟᴇss ᴛʜᴀɴ %1",
+		'notFoundCharacter': "❌ | Nᴏ ᴄʜᴀʀᴀᴄᴛᴇʀ ɴᴀᴍᴇᴅ %1 ᴡᴀs ғᴏᴜɴᴅ ɪɴ ᴛʜᴇ ᴄʜᴀʀᴀᴄᴛᴇʀ ʟɪsᴛ",
+		'errorGetCharacter': "⚠️ | Aɴ ᴇʀʀᴏʀ oᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ɢᴇᴛᴛɪɴɢ ᴄʜᴀʀᴀᴄᴛᴇʀ ᴅᴀᴛᴀ:\n%1: %2",
+		'success': "✅ | Yᴏᴜʀ ᴀᴠᴀᴛᴀʀ ɪs ʀᴇᴀᴅʏ\nCʜᴀʀᴀᴄᴛᴇʀ: %1\nID: %2\nBᴀᴄᴋɢʀᴏᴜɴᴅ ᴛᴇxᴛ: %3\nSɪɢɴᴀᴛᴜʀᴇ: %4\nCᴏʟᴏʀ: %5",
+		'defaultColor': "dᴇғᴀᴜʟᴛ",
+		'error': "❌ | Aɴ ᴇʀʀᴏʀ oᴄᴄᴜʀʀᴇᴅ\n%1: %2"
+	}
+},
+
+badwords: {
+	'description': "Tυʀɴ Oɴ/Oғғ/Aᴅᴅ/Rᴇᴍᴏᴠᴇ ʙᴀᴅ ᴡᴏʀᴅs ᴡᴀʀɴɪɴɢ ⚠️",
+	'guide': "   {pn} aᴅᴅ <ᴡᴏʀᴅs> ➕: aᴅᴅ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs (ᴄᴏᴍᴍᴀ sᴇᴘᴀʀᴀᴛᴇᴅ ',' oʀ '|' ᴠᴇʀᴛɪᴄᴀʟ ʙᴀʀs)\n   {pn} ᴅᴇʟᴇᴛᴇ <ᴡᴏʀᴅs> ➖: ᴅᴇʟᴇᴛᴇ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs\n   {pn} ʟɪsᴛ <hide | ᴇᴍᴘᴛʏ> 📑: ʟɪsᴛ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs\n   {pn} ᴜɴᴡᴀʀɴ [<ᴜsᴇʀID> | <@ᴛᴀɢ>] 🧹: ʀᴇᴍᴏᴠᴇ 1 ᴡᴀʀɴɪɴɢ\n   {pn} oɴ / oғғ ⚡: ᴛᴜʀɴ ᴡᴀʀɴɪɴɢ oɴ/ᴏғғ",
+	'text': {
+		'onText': "oɴ",
+		'offText': "oғғ",
+		'onlyAdmin': "⚠️ | Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ aᴅᴅ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs",
+		'missingWords': "⚠️ | Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴇɴᴛᴇʀᴇᴅ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs",
+		'addedSuccess': "✅ | Aᴅᴅᴇᴅ %1 ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴛᴏ ᴛʜᴇ ʟɪsᴛ",
+		'alreadyExist': "❌ | %1 ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴀʟʀᴇᴀᴅʏ ᴇxɪsᴛ: %2",
+		'tooShort': "⚠️ | %1 ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴄᴀɴɴᴏᴛ ʙᴇ ᴀᴅᴅᴇᴅ (less than 2 characters): %2",
+		'onlyAdmin2': "⚠️ | Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴅᴇʟᴇᴛᴇ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs",
+		'missingWords2': "⚠️ | Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴇɴᴛᴇʀᴇᴅ ᴡᴏʀᴅs ᴛᴏ ᴅᴇʟᴇᴛᴇ",
+		'deletedSuccess': "✅ | Dᴇʟᴇᴛᴇᴅ %1 ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴛʜᴇ ʟɪsᴛ",
+		'notExist': "❌ | %1 ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴅᴏ ɴᴏᴛ ᴇxɪsᴛ: %2",
+		'emptyList': "⚠️ | Yᴏᴜʀ ɢʀᴏυᴘ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ʟɪsᴛ ɪs ᴇᴍᴘᴛʏ",
+		'badWordsList': "📑 | Lɪsᴛ oғ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ɪɴ ʏᴏᴜʀ ɢʀᴏυᴘ: %1",
+		'onlyAdmin3': "⚠️ | Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ %1 ᴛʜɪs ғᴇᴀᴛᴜʀᴇ",
+		'turnedOnOrOff': "✅ | Bᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴡᴀʀɴɪɴɢ ʜᴀs ʙᴇᴇɴ %1",
+		'onlyAdmin4': "⚠️ | Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴅᴇʟᴇᴛᴇ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴡᴀʀɴɪɴɢ",
+		'missingTarget': "⚠️ | Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴇɴᴛᴇʀᴇᴅ ᴜsᴇʀ ɪᴅ oʀ ᴛᴀɢɢᴇᴅ ᴜsᴇʀ",
+		'notWarned': "⚠️ | Usᴇʀ %1 ʜᴀs ɴᴏᴛ ʙᴇᴇɴ ᴡᴀʀɴᴇᴅ ғᴏʀ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs",
+		'removedWarn': "✅ | Usᴇʀ %1 | %2 ʜᴀs ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ 1 ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴡᴀʀɴɪɴɢ",
+		'warned': "⚠️ | Bᴀɴɴᴇᴅ ᴡᴏʀᴅs \"%1\" ʜᴀᴠᴇ ʙᴇᴇɴ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ, ɪғ ʏᴏᴜ ᴄᴏɴᴛɪɴᴜᴇ ʏᴏᴜ ᴡɪʟʟ ʙᴇ ᴋɪᴄᴋᴇᴅ",
+		'warned2': "⚠️ | Bᴀɴɴᴇᴅ ᴡᴏʀᴅs \"%1\" ʜᴀᴠᴇ ʙᴇᴇɴ ᴅᴇᴛᴇᴄᴛᴇᴅ ɪɴ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ, ʏᴏᴜ ʜᴀᴠᴇ ᴠɪᴏʟᴀᴛᴇᴅ 2 ᴛɪᴍᴇs ᴀɴᴅ ᴡɪʟʟ ʙᴇ ᴋɪᴄᴋᴇᴅ",
+		'needAdmin': "⚠️ | Bᴏᴛ ɴᴇᴇᴅs ᴀᴅᴍɪɴ ᴘʀɪᴠɪʟᴇɢᴇs ᴛᴏ ᴋɪᴄᴋ ʙᴀɴɴᴇᴅ ᴍᴇᴍʙᴇʀs",
+		'unwarned': "✅ | Rᴇᴍᴏᴠᴇᴅ ʙᴀɴɴᴇᴅ ᴡᴏʀᴅs ᴡᴀʀɴɪɴɢ oғ ᴜsᴇʀ %1 | %2"
+	}
+},
+
+balance: {
+	'description': "Vɪᴇᴡ ʏᴏᴜʀ ᴍᴏɴᴇʏ 💰 oʀ ᴛʜᴇ ᴍᴏɴᴇʏ oғ ᴛʜᴇ ᴛᴀɢɢᴇᴅ ᴘᴇʀsᴏɴ",
+	'guide': "   {pn}: vɪᴇᴡ ʏᴏᴜʀ ᴍᴏɴᴇʏ\n   {pn} <@ᴛᴀɢ>: vɪᴇᴡ ᴛʜᴇ ᴍᴏɴᴇʏ oғ ᴛʜᴇ ᴛᴀɢɢᴇᴅ ᴘᴇʀsᴏɴ",
+	'text': {
+		'money': "💰 | Yᴏᴜ ʜᴀᴠᴇ %1$",
+		'moneyOf': "💵 | %1 ʜᴀs %2$"
+	}
+},
+
+batslap: {
+	'description': "Bᴀᴛsʟᴀᴘ ɪᴍᴀɢᴇ 🖐️",
+	'text': {
+		'noTag': "⚠️ | Yᴏᴜ ᴍᴜsᴛ ᴛᴀɢ ᴛʜᴇ ᴘᴇʀsᴏɴ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sʟᴀᴘ"
+	}
+},	
 	busy: {
-		description: "turn on do not disturb mode, when you are tagged bot will notify",
-		guide: "   {pn} [empty | <reason>]: turn on do not disturb mode\n   {pn} off: turn off do not disturb mode",
-		text: {
-			turnedOff: "✅ | Do not disturb mode has been turned off",
-			turnedOn: "✅ | Do not disturb mode has been turned on",
-			turnedOnWithReason: "✅ | Do not disturb mode has been turned on with reason: %1",
-			alreadyOn: "User %1 is currently busy",
-			alreadyOnWithReason: "User %1 is currently busy with reason: %2"
-		}
-	},
-	callad: {
-		description: "send report, feedback, bug,... to admin bot",
-		guide: "   {pn} <message>",
-		text: {
-			missingMessage: "Please enter the message you want to send to admin",
-			sendByGroup: "\n- Sent from group: %1\n- Thread ID: %2",
-			sendByUser: "\n- Sent from user",
-			content: "\n\nContent:\n─────────────────\n%1\n─────────────────\nReply this message to send message to user",
-			success: "Sent your message to admin successfully!",
-			reply: "📍 Reply from admin %1:\n─────────────────\n%2\n─────────────────\nReply this message to continue send message to admin",
-			replySuccess: "Sent your reply to admin successfully!",
-			feedback: "📝 Feedback from user %1:\n- User ID: %2%3\n\nContent:\n─────────────────\n%4\n─────────────────\nReply this message to send message to user",
-			replyUserSuccess: "Sent your reply to user successfully!"
-		}
-	},
+	'description': "Dᴏ Nᴏᴛ Dɪsᴛᴜʀʙ Mᴏᴅᴇ 🔕 — Wʜᴇɴ ʏᴏᴜ ᴀʀᴇ ᴛᴀɢɢᴇᴅ, ʙᴏᴛ ᴡɪʟʟ ɴᴏᴛɪғʏ",
+	'guide': "   {pn} [ᴇᴍᴘᴛʏ | <ʀᴇᴀsᴏɴ>] ⚡: ᴛᴜʀɴ oɴ DɴD mode\n   {pn} oғғ ❌: ᴛᴜʀɴ oғғ DɴD mode",
+	'text': {
+		'turnedOff': "✅ | Dᴏ Nᴏᴛ Dɪsᴛᴜʀʙ mode ʜᴀs ʙᴇᴇɴ tυʀɴᴇᴅ oғғ",
+		'turnedOn': "✅ | Dᴏ Nᴏᴛ Dɪsᴛᴜʀʙ mode ʜᴀs ʙᴇᴇɴ tυʀɴᴇᴅ oɴ",
+		'turnedOnWithReason': "✅ | Dᴏ Nᴏᴛ Dɪsᴛᴜʀʙ mode ʜᴀs ʙᴇᴇɴ tυʀɴᴇᴅ oɴ wɪᴛʜ ʀᴇᴀsᴏɴ: %1",
+		'alreadyOn': "⚠️ | Usᴇʀ %1 ɪs cᴜʀʀᴇɴᴛʟʏ ʙᴜsʏ",
+		'alreadyOnWithReason': "⚠️ | Usᴇʀ %1 ɪs cᴜʀʀᴇɴᴛʟʏ ʙᴜsʏ wɪᴛʜ ʀᴇᴀsᴏɴ: %2"
+	}
+},
+
+callad: {
+	'description': "Sᴇɴᴅ ʀᴇᴘᴏʀᴛ, ғᴇᴇᴅʙᴀᴄᴋ, ʙᴜɢ ᴛᴏ ᴀᴅᴍɪɴ ʙᴏᴛ 📩",
+	'guide': "   {pn} <ᴍᴇssᴀɢᴇ> ✉️",
+	'text': {
+		'missingMessage': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴍᴇssᴀɢᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sᴇɴᴅ ᴛᴏ ᴀᴅᴍɪɴ",
+		'sendByGroup': "📤 | Sᴇɴᴛ ғʀᴏᴍ ɢʀᴏυᴘ: %1\n- Tʜʀᴇᴀᴅ ID: %2",
+		'sendByUser': "📤 | Sᴇɴᴛ ғʀᴏᴍ ᴜsᴇʀ",
+		'content': "📝 | Cᴏɴᴛᴇɴᴛ:\n─────────────────\n%1\n─────────────────\nRᴇᴘʟʏ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇ ᴛᴏ ᴜsᴇʀ",
+		'success': "✅ | Sᴇɴᴛ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀᴅᴍɪɴ sᴜᴄᴄᴇssғᴜʟʟʏ!",
+		'reply': "📍 | Rᴇᴘʟʏ ғʀᴏᴍ ᴀᴅᴍɪɴ %1:\n─────────────────\n%2\n─────────────────\nRᴇᴘʟʏ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ sᴇɴᴅ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀᴅᴍɪɴ",
+		'replySuccess': "✅ | Sᴇɴᴛ ʏᴏᴜʀ ʀᴇᴘʟʏ ᴛᴏ ᴀᴅᴍɪɴ sᴜᴄᴄᴇssғᴜʟʟʏ!",
+		'feedback': "📝 | Fᴇᴇᴅʙᴀᴄᴋ ғʀᴏᴍ ᴜsᴇʀ %1:\n- Usᴇʀ ID: %2%3\n\nCᴏɴᴛᴇɴᴛ:\n─────────────────\n%4\n─────────────────\nRᴇᴘʟʏ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ sᴇɴᴅ ᴍᴇssᴀɢᴇ ᴛᴏ ᴜsᴇʀ",
+		'replyUserSuccess': "✅ | Sᴇɴᴛ ʏᴏᴜʀ ʀᴇᴘʟʏ ᴛᴏ ᴜsᴇʀ sᴜᴄᴄᴇssғᴜʟʟʏ!"
+	}
+},
 	cmd: {
-		description: "Manage your command files",
-		guide: "{pn} load <command file name>\n{pn} loadAll\n{pn} install <url> <command file name>: Download and install a command file from a url, url is the path to the file (raw)",
-		text: {
-			missingFileName: "⚠️ | Please enter the command name you want to reload",
-			loaded: "✅ | Loaded command \"%1\" successfully",
-			loadedError: "❌ | Failed to load command \"%1\" with error\n%2: %3",
-			loadedSuccess: "✅ | Loaded successfully \"%1\" command",
-			loadedFail: "❌ | Failed to load \"%1\" command\n%2",
-			missingCommandNameUnload: "⚠️ | Please enter the command name you want to unload",
-			unloaded: "✅ | Unloaded command \"%1\" successfully",
-			unloadedError: "❌ | Failed to unload command \"%1\" with error\n%2: %3",
-			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
-			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
-			missingFileNameInstall: "⚠️ | Please enter the file name to save the command (with .js extension)",
-			invalidUrlOrCode: "⚠️ | Unable to get command code",
-			alreadExist: "⚠️ | The command file already exists, are you sure you want to overwrite the old command file?\nReact to this message to continue",
-			installed: "✅ | Installed command \"%1\" successfully, the command file is saved at %2",
-			installedError: "❌ | Failed to install command \"%1\" with error\n%2: %3",
-			missingFile: "⚠️ | Command file \"%1\" not found",
-			invalidFileName: "⚠️ | Invalid command file name",
-			unloadedFile: "✅ | Unloaded command \"%1\""
+	'description': "Mᴀɴᴀɢᴇ ʏᴏᴜʀ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇs ⚙️",
+	'guide': "{pn} load <ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ>\n{pn} loadAll 🔄\n{pn} install <ᴜʀʟ> <ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ> 💾: Dᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ ɪɴsᴛᴀʟʟ ᴀ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ғʀᴏᴍ ᴀ ᴜʀʟ (ʀᴀᴡ)",
+	'text': {
+		'missingFileName': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇʟᴏᴀᴅ",
+		'loaded': "✅ | Lᴏᴀᴅᴇᴅ cᴏᴍᴍᴀɴᴅ \"%1\" sᴜᴄᴄᴇssғᴜʟʟʏ",
+		'loadedError': "❌ | Fᴀɪʟᴇᴅ ᴛᴏ ʟᴏᴀᴅ cᴏᴍᴍᴀɴᴅ \"%1\" wɪᴛʜ ᴇʀʀᴏʀ\n%2: %3",
+		'loadedSuccess': "✅ | Lᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ \"%1\" cᴏᴍᴍᴀɴᴅ",
+		'loadedFail': "❌ | Fᴀɪʟᴇᴅ ᴛᴏ ʟᴏᴀᴅ \"%1\" cᴏᴍᴍᴀɴᴅ\n%2",
+		'missingCommandNameUnload': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜɴʟᴏᴀᴅ",
+		'unloaded': "✅ | Uɴʟᴏᴀᴅᴇᴅ cᴏᴍᴍᴀɴᴅ \"%1\" sᴜᴄᴄᴇssғᴜʟʟʏ",
+		'unloadedError': "❌ | Fᴀɪʟᴇᴅ ᴛᴏ ᴜɴʟᴏᴀᴅ cᴏᴍᴍᴀɴᴅ \"%1\" wɪᴛʜ ᴇʀʀᴏʀ\n%2: %3",
+		'missingUrlCodeOrFileName': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴜʀʟ ᴏʀ ᴄᴏᴅᴇ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ ᴛᴏ ɪɴsᴛᴀʟʟ",
+		'missingUrlOrCode': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴜʀʟ ᴏʀ ᴄᴏᴅᴇ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɪɴsᴛᴀʟʟ",
+		'missingFileNameInstall': "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ғɪʟᴇ ɴᴀᴍᴇ ᴛᴏ sᴀᴠᴇ ᴛʜᴇ cᴏᴍᴍᴀɴᴅ (.js ᴇxᴛᴇɴsɪᴏɴ)",
+		'invalidUrlOrCode': "⚠️ | Uɴᴀʙʟᴇ ᴛᴏ ɢᴇᴛ ᴄᴏᴍᴍᴀɴᴅ ᴄᴏᴅᴇ",
+		'alreadExist': "⚠️ | Tʜᴇ cᴏᴍᴍᴀɴᴅ ғɪʟᴇ ᴀʟʀᴇᴀᴅʏ ᴇxɪsᴛ, ʀᴇᴀᴄᴛ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ ᴛᴏ ᴏᴠᴇʀᴡʀɪᴛᴇ",
+		'installed': "✅ | Iɴsᴛᴀʟʟᴇᴅ cᴏᴍᴍᴀɴᴅ \"%1\" sᴜᴄᴄᴇssғᴜʟʟʏ 💾, sᴀᴠᴇᴅ ᴀᴛ %2",
+		'installedError': "❌ | Fᴀɪʟᴇᴅ ᴛᴏ ɪɴsᴛᴀʟʟ cᴏᴍᴍᴀɴᴅ \"%1\" wɪᴛʜ ᴇʀʀᴏʀ\n%2: %3",
+		'missingFile': "⚠️ | Cᴏᴍᴍᴀɴᴅ ғɪʟᴇ \"%1\" ɴᴏᴛ ғᴏᴜɴᴅ",
+		'invalidFileName': "⚠️ | Iɴᴠᴀʟɪᴅ cᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ",
+		'unloadedFile': "✅ | Uɴʟᴏᴀᴅᴇᴅ cᴏᴍᴍᴀɴᴅ \"%1\""
+	}
+},
+
+count: {
+	'description': "Vɪᴇᴡ ɴᴜᴍʙᴇʀ oғ ᴍᴇssᴀɢᴇs ᴏғ ᴀʟʟ ᴍᴇᴍʙᴇʀs oʀ ʏᴏᴜʀsᴇʟғ 📝",
+	'guide': "   {pn}: ᴠɪᴇᴡ ʏᴏᴜʀ ᴍᴇssᴀɢᴇ ᴄᴏᴜɴᴛ\n   {pn} @ᴛᴀɢ: ᴠɪᴇᴡ ᴍᴇssᴀɢᴇs oғ ᴛᴀɢɢᴇᴅ ᴘᴇʀsᴏɴs\n   {pn} all: ᴠɪᴇᴡ ᴍᴇssᴀɢᴇs oғ ᴀʟʟ ᴍᴇᴍʙᴇʀs",
+	'text': {
+		'count': "📊 | Nᴜᴍʙᴇʀ oғ ᴍᴇssᴀɢᴇs oғ ᴍᴇᴍʙᴇʀs:",
+		'endMessage': "⚠️ | Tʜᴏsᴇ wɪᴛʜᴏᴜᴛ ᴀ ɴᴀᴍᴇ ʜᴀᴠᴇ ɴᴏᴛ sᴇɴᴛ ᴀɴʏ ᴍᴇssᴀɢᴇs",
+		'page': "📄 | Pᴀɢᴇ [%1/%2]",
+		'reply': "💬 | Rᴇᴘʟʏ wɪᴛʜ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀ ᴛᴏ ᴠɪᴇᴡ ᴍᴏʀᴇ",
+		'result': "🏅 | %1 ʀᴀɴᴋ %2 wɪᴛʜ %3 ᴍᴇssᴀɢᴇs",
+		'yourResult': "👑 | Yᴏᴜ ᴀʀᴇ ʀᴀɴᴋᴇᴅ %1 ᴀɴᴅ sᴇɴᴛ %2 ᴍᴇssᴀɢᴇs ɪɴ ᴛʜɪs ɢʀᴏυᴘ",
+		'invalidPage': "⚠️ | Iɴᴠᴀʟɪᴅ ᴘᴀɢᴇ ɴᴜᴍʙᴇʀ"
+	}
+},
+
+customrankcard: {
+	'description': "Dᴇsɪɢɴ ʏᴏᴜʀ ᴏᴡɴ ʀᴀɴᴋ ᴄᴀʀᴅ 🎨",
+	'guide': {
+		'body': "   {pn} [maincolor | subcolor | linecolor | progresscolor | alphasubcolor | textcolor | namecolor | expcolor | rankcolor | levelcolor | reset] <value>\n"
+			+ "   Iɴ ᴡʜɪᴄʜ: \n"
+			+ "  + maincolor | background <value>: ᴍᴀɪɴ ʙᴀᴄᴋɢʀᴏᴜɴᴅ oғ ʀᴀɴᴋ ᴄᴀʀᴅ\n"
+			+ "  + subcolor <value>: sᴜʙ ʙᴀᴄᴋɢʀᴏᴜɴᴅ\n"
+			+ "  + linecolor <value>: ʟɪɴᴇ ʙᴇᴛᴡᴇᴇɴ ᴍᴀɪɴ ᴀɴᴅ sᴜʙ ʙᴀᴄᴋɢʀᴏᴜɴᴅ\n"
+			+ "  + expbarcolor <value>: ᴄᴏʟᴏʀ oғ ᴇxᴘ ʙᴀʀ\n"
+			+ "  + progresscolor <value>: ᴄᴏʟᴏʀ oғ ᴄᴜʀʀᴇɴᴛ ᴇxᴘ ʙᴀʀ\n"
+			+ "  + alphasubcolor <value>: ᴏᴘᴀᴄɪᴛʏ oғ sᴜʙ ʙᴀᴄᴋɢʀᴏᴜɴᴅ (0 -> 1)\n"
+			+ "  + textcolor <value>: ᴛᴇxᴛ ᴄᴏʟᴏʀ (hex oʀ rgba)\n"
+			+ "  + namecolor <value>: ɴᴀᴍᴇ ᴄᴏʟᴏʀ\n"
+			+ "  + expcolor <value>: ᴇxᴘ ᴄᴏʟᴏʀ\n"
+			+ "  + rankcolor <value>: ʀᴀɴᴋ ᴄᴏʟᴏʀ\n"
+			+ "  + levelcolor <value>: ʟᴇᴠᴇʟ ᴄᴏʟᴏʀ\n"
+			+ "    • <value> ᴄᴀɴ ʙᴇ ʜᴇx, rgb, rgba, ɢʀᴀᴅɪᴇɴᴛ ᴏʀ ɪᴍᴀɢᴇ ᴜʀʟ\n"
+			+ "    • Fᴏʀ ɢʀᴀᴅɪᴇɴᴛ, sᴇᴘᴀʀᴀᴛᴇ ᴄᴏʟᴏʀs ʙʏ sᴘᴀᴄᴇ\n"
+			+ "   {pn} reset 🔄: ʀᴇsᴇᴛ ᴀʟʟ ᴛᴏ ᴅᴇғᴀᴜʟᴛ\n"
+			+ "   Eхᴀᴍᴘʟᴇ:\n"
+			+ "    {pn} maincolor #fff000\n"
+			+ "    {pn} subcolor rgba(255,136,86,0.4)\n"
+			+ "    {pn} reset",
+		'attachment': {
+			[`${process.cwd()}/scripts/cmds/assets/guide/customrankcard_1.jpg`]: "https://i.ibb.co/BZ2Qgs1/image.png",
+			[`${process.cwd()}/scripts/cmds/assets/guide/customrankcard_2.png`]: "https://i.ibb.co/wy1ZHHL/image.png"
 		}
-	},
-	count: {
-		description: "View the number of messages of all members or yourself (since the bot joined the group)",
-		guide: "   {pn}: used to view the number of messages of you\n   {pn} @tag: used to view the number of messages of those tagged\n   {pn} all: used to view the number of messages of all members",
+	}
+},
 		text: {
-			count: "Number of messages of members:",
-			endMessage: "Those who do not have a name in the list have not sent any messages.",
-			page: "Page [%1/%2]",
-			reply: "Reply to this message with the page number to view more",
-			result: "%1 rank %2 with %3 messages",
-			yourResult: "You are ranked %1 and have sent %2 messages in this group",
-			invalidPage: "Invalid page number"
-		}
-	},
-	customrankcard: {
-		description: "Design rank card by your own",
-		guide: {
-			body: "   {pn} [maincolor | subcolor | linecolor | progresscolor | alphasubcolor | textcolor | namecolor | expcolor | rankcolor | levelcolor | reset] <value>"
-				+ "\n   In which: "
-				+ "\n  + maincolor | background <value>: main background of rank card"
-				+ "\n  + subcolor <value>: sub background"
-				+ "\n  + linecolor <value>: color of line between main and sub background"
-				+ "\n  + expbarcolor <value>: color of exp bar"
-				+ "\n  + progresscolor <value>: color of current exp bar"
-				+ "\n  + alphasubcolor <value>: opacity of sub background (from 0 -> 1)"
-				+ "\n  + textcolor <value>: color of text (hex color or rgba)"
-				+ "\n  + namecolor <value>: color of name"
-				+ "\n  + expcolor <value>: color of exp"
-				+ "\n  + rankcolor <value>: color of rank"
-				+ "\n  + levelcolor <value>: color of level"
-				+ "\n    • <value> can be hex color, rgb, rgba, gradient (each color is separated by space) or image url"
-				+ "\n    • If you want to use gradient, please enter many colors separated by space"
-				+ "\n   {pn} reset: reset all to default"
-				+ "\n   Example:"
-				+ "\n    {pn} maincolor #fff000"
-				+ "\n    {pn} subcolor rgba(255,136,86,0.4)"
-				+ "\n    {pn} reset",
-			attachment: {
-				[`${process.cwd()}/scripts/cmds/assets/guide/customrankcard_1.jpg`]: "https://i.ibb.co/BZ2Qgs1/image.png",
-				[`${process.cwd()}/scripts/cmds/assets/guide/customrankcard_2.png`]: "https://i.ibb.co/wy1ZHHL/image.png"
-			}
-		},
-		text: {
-			invalidImage: "Invalid image url, please choose an url with image destination (jpg, jpeg, png, gif), you can upload image to https://imgbb.com/ and choose \"get direct link\" to get image url",
-			invalidAttachment: "Invalid attachment, please choose an image file",
-			invalidColor: "Invalid color code, please choose a hex color code (6 digits) or rgba color code",
-			notSupportImage: "Url image is not supported with option \"%1\"",
-			success: "Your changes have been saved, here is a preview",
-			reseted: "All settings have been reset to default",
-			invalidAlpha: "Please choose a number from 0 -> 1"
-		}
-	},
-	dhbc: {
-		description: "play game catch the word",
-		guide: "{pn}",
-		text: {
-			reply: "Please reply this message with the answer\n%1",
-			isSong: "This is the name of the song of the singer %1",
-			notPlayer: "⚠️ You are not the player of this question",
-			correct: "🎉 Congratulations you have answered correctly and received %1$",
-			wrong: "⚠️ You have answered incorrectly"
-		}
-	},
-	emojimix: {
-		description: "Mix 2 emoji together",
-		guide: "   {pn} <emoji1> <emoji2>\n   Example:  {pn} 🤣 🥰"
-	},
-	eval: {
-		description: "Test code quickly",
-		guide: "{pn} <code to test>",
-		text: {
-			error: "❌ An error occurred:"
-		}
-	},
-	event: {
-		description: "Manage your event command files",
-		guide: "{pn} load <command file name>\n{pn} loadAll\n{pn} install <url> <command file name>: Download and load event command, url is the path to the command file (raw)",
-		text: {
-			missingFileName: "⚠️ | Please enter the command name you want to reload",
-			loaded: "✅ | Loaded event command \"%1\" successfully",
-			loadedError: "❌ | Loaded event command \"%1\" failed with error\n%2: %3",
-			loadedSuccess: "✅ | Loaded \"%1\" event command successfully",
-			loadedFail: "❌ | Loaded event command \"%1\" failed\n%2",
-			missingCommandNameUnload: "⚠️ | Please enter the command name you want to unload",
-			unloaded: "✅ | Unloaded event command \"%1\" successfully",
-			unloadedError: "❌ | Unloaded event command \"%1\" failed with error\n%2: %3",
-			missingUrlCodeOrFileName: "⚠️ | Please enter the url or code and command file name you want to install",
-			missingUrlOrCode: "⚠️ | Please enter the url or code of the command file you want to install",
-			missingFileNameInstall: "⚠️ | Please enter the file name to save the command (with .js extension)",
-			invalidUrlOrCode: "⚠️ | Unable to get command code",
-			alreadExist: "⚠️ | The command file already exists, are you sure you want to overwrite the old command file?\nReact to this message to continue",
-			installed: "✅ | Installed event command \"%1\" successfully, the command file is saved at %2",
-			installedError: "❌ | Installed event command \"%1\" failed with error\n%2: %3",
-			missingFile: "⚠️ | File \"%1\" not found",
-			invalidFileName: "⚠️ | Invalid file name",
-			unloadedFile: "✅ | Unloaded command \"%1\""
-		}
-	},
+	invalidImage: "⚠️ | Iɴᴠᴀʟɪᴅ ɪᴍᴀɢᴇ ᴜʀʟ, ᴘʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴀɴ ᴜʀʟ wɪᴛʜ ɪᴍᴀɢᴇ ᴅᴇsᴛɪɴᴀᴛɪᴏɴ (jpg, jpeg, png, gif) 🌐\nYᴏᴜ ᴄᴀɴ ᴜᴘʟᴏᴀᴅ ɪᴍᴀɢᴇ ᴛᴏ https://imgbb.com/ ᴀɴᴅ ᴄʜᴏᴏsᴇ \"ɢᴇᴛ ᴅɪʀᴇᴄᴛ ʟɪɴᴋ\" ᴛᴏ ɢᴇᴛ ɪᴍᴀɢᴇ ᴜʀʟ",
+	invalidAttachment: "⚠️ | Iɴᴠᴀʟɪᴅ ᴀᴛᴛᴀᴄʜᴍᴇɴᴛ, ᴘʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴀɴ ɪᴍᴀɢᴇ ғɪʟᴇ 📎",
+	invalidColor: "⚠️ | Iɴᴠᴀʟɪᴅ ᴄᴏʟᴏʀ ᴄᴏᴅᴇ, ᴘʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ʜᴇx (6 ᴅɪɢɪᴛs) ᴏʀ rgba ᴄᴏʟᴏʀ 🎨",
+	notSupportImage: "⚠️ | Uʀʟ ɪᴍᴀɢᴇ ɪs ɴᴏᴛ sᴜᴘᴘᴏʀᴛᴇᴅ wɪᴛʜ ᴏᴘᴛɪᴏɴ \"%1\"",
+	success: "✅ | Yᴏᴜʀ ᴄʜᴀɴɢᴇs ʜᴀᴠᴇ ʙᴇᴇɴ sᴀᴠᴇᴅ, ʜᴇʀᴇ ɪs ᴀ ᴘʀᴇᴠɪᴇᴡ 👁️",
+	reseted: "🔄 | Aʟʟ sᴇᴛᴛɪɴɢs ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇsᴇᴛ ᴛᴏ ᴅᴇғᴀᴜʟᴛ",
+	invalidAlpha: "⚠️ | Pʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴀ ɴᴜᴍʙᴇʀ ғʀᴏᴍ 0 -> 1"
+},
+
+dhbc: {
+	description: "Pʟᴀʏ ɢᴀᴍᴇ 'Cᴀᴛᴄʜ Tʜᴇ Wᴏʀᴅ' 🎮",
+	guide: "{pn}",
+	text: {
+		reply: "💬 | Pʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛʜɪs ᴍᴇssᴀɢᴇ wɪᴛʜ ᴛʜᴇ ᴀɴsᴡᴇʀ\n%1",
+		isSong: "🎵 | Tʜɪs ɪs ᴛʜᴇ sᴏɴɢ ɴᴀᴍᴇ ʙʏ sɪɴɢᴇʀ %1",
+		notPlayer: "⚠️ | Yᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴛʜᴇ ᴘʟᴀʏᴇʀ ᴏғ ᴛʜɪs qᴜᴇsᴛɪᴏɴ",
+		correct: "🎉 | Cᴏɴɢʀᴀᴛs! Yᴏᴜ ᴀɴsᴡᴇʀᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ ᴀɴᴅ ʀᴇᴄᴇɪᴠᴇᴅ %1$",
+		wrong: "❌ | Yᴏᴜ ᴀɴsᴡᴇʀᴇᴅ ɪɴᴄᴏʀʀᴇᴄᴛʟʏ"
+	}
+},
+
+emojimix: {
+	description: "Mɪx 2 ᴇᴍᴏᴊɪs ᴛᴏɢᴇᴛʜᴇʀ 😎",
+	guide: "   {pn} <emoji1> <emoji2>\n   Eхᴀᴍᴘʟᴇ: {pn} 🤣 🥰"
+},
+
+eval: {
+	description: "Tᴇsᴛ ᴄᴏᴅᴇ qᴜɪᴄᴋʟʏ 💻",
+	guide: "{pn} <code ᴛᴏ ᴛᴇsᴛ>",
+	text: {
+		error: "❌ | Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ:"
+	}
+},
+
+event: {
+	description: "Mᴀɴᴀɢᴇ ʏᴏᴜʀ ᴇᴠᴇɴᴛ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇs 🎫",
+	guide: "{pn} load <ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ>\n{pn} loadAll 🔄\n{pn} install <ᴜʀʟ> <ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ> 💾: Dᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ ʟᴏᴀᴅ ᴇᴠᴇɴᴛ ᴄᴏᴍᴍᴀɴᴅ (raw)",
+	text: {
+		missingFileName: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇʟᴏᴀᴅ",
+		loaded: "✅ | Lᴏᴀᴅᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\" sᴜᴄᴄᴇssғᴜʟʟʏ",
+		loadedError: "❌ | Lᴏᴀᴅᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\" ғᴀɪʟᴇᴅ wɪᴛʜ ᴇʀʀᴏʀ\n%2: %3",
+		loadedSuccess: "✅ | Lᴏᴀᴅᴇᴅ \"%1\" ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ sᴜᴄᴄᴇssғᴜʟʟʏ",
+		loadedFail: "❌ | Lᴏᴀᴅᴇᴅ \"%1\" ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ ғᴀɪʟᴇᴅ\n%2",
+		missingCommandNameUnload: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ɴᴀᴍᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜɴʟᴏᴀᴅ",
+		unloaded: "✅ | Uɴʟᴏᴀᴅᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\" sᴜᴄᴄᴇssғᴜʟʟʏ",
+		unloadedError: "❌ | Uɴʟᴏᴀᴅᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\" ғᴀɪʟᴇᴅ wɪᴛʜ ᴇʀʀᴏʀ\n%2: %3",
+		missingUrlCodeOrFileName: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴜʀʟ ᴏʀ ᴄᴏᴅᴇ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ɴᴀᴍᴇ ᴛᴏ ɪɴsᴛᴀʟʟ",
+		missingUrlOrCode: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴜʀʟ ᴏʀ ᴄᴏᴅᴇ ᴏғ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ғɪʟᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɪɴsᴛᴀʟʟ",
+		missingFileNameInstall: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ғɪʟᴇ ɴᴀᴍᴇ ᴛᴏ sᴀᴠᴇ ᴛʜᴇ cᴏᴍᴍᴀɴᴅ (.js ᴇxᴛᴇɴsɪᴏɴ)",
+		invalidUrlOrCode: "⚠️ | Uɴᴀʙʟᴇ ᴛᴏ ɢᴇᴛ ᴄᴏᴍᴍᴀɴᴅ ᴄᴏᴅᴇ",
+		alreadExist: "⚠️ | Tʜᴇ cᴏᴍᴍᴀɴᴅ ғɪʟᴇ ᴀʟʀᴇᴀᴅʏ ᴇxɪsᴛ, ʀᴇᴀᴄᴛ ᴛᴏ ᴏᴠᴇʀᴡʀɪᴛᴇ",
+		installed: "✅ | Iɴsᴛᴀʟʟᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\" sᴜᴄᴄᴇssғᴜʟʟʏ 💾, sᴀᴠᴇᴅ ᴀᴛ %2",
+		installedError: "❌ | Iɴsᴛᴀʟʟᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\" ғᴀɪʟᴇᴅ wɪᴛʜ ᴇʀʀᴏʀ\n%2: %3",
+		missingFile: "⚠️ | Fɪʟᴇ \"%1\" ɴᴏᴛ ғᴏᴜɴᴅ",
+		invalidFileName: "⚠️ | Iɴᴠᴀʟɪᴅ ғɪʟᴇ ɴᴀᴍᴇ",
+		unloadedFile: "✅ | Uɴʟᴏᴀᴅᴇᴅ ᴇᴠᴇɴᴛ cᴏᴍᴍᴀɴᴅ \"%1\""
+	}
+},
 	filteruser: {
-		description: "filter group members by number of messages or locked account",
-		guide: "   {pn} [<number of messages> | die]",
-		text: {
-			needAdmin: "⚠️ | Please add the bot as a group admin to use this command",
-			confirm: "⚠️ | Are you sure you want to delete group members with less than %1 messages?\nReact to this message to confirm",
-			kickByBlock: "✅ | Successfully deleted %1 members who are locked acc",
-			kickByMsg: "✅ | Successfully deleted %1 members with less than %2 messages",
-			kickError: "❌ | An error occurred and could not kick %1 members:\n%2",
-			noBlock: "✅ | There are no members who are locked acc",
-			noMsg: "✅ | There are no members with less than %1 messages"
-		}
-	},
-	getfbstate: {
-		description: "Get current fbstate",
-		guide: "{pn}",
-		text: {
-			success: "Sent fbstate to you, please check bot's private message"
-		}
-	},
-	grouptag: {
-		description: "Tag members by group",
-		guide: "   {pn} add <groupTagName> <@tags>: use to add new group tag or add members to group tag\n   Example:\n    {pn} TEAM1 @tag1 @tag2\n\n   {pn} del <groupTagName> <@tags>: use to remove members from group tag\n   Example:\n    {pn} del TEAM1 @tag1 @tag2\n\n   {pn} remove <groupTagName>: use to remove group tag\n   Example:\n    {pn} remove TEAM1\n\n   {pn} rename <groupTagName> | <newGroupTagName>: use to rename group tag\n\n   {pn} [list | all]: use to view list of group tag in your group chat\n\n   {pn} info <groupTagName>: use to view info of group tag",
-		text: {
-			noGroupTagName: "Please enter group tag name",
-			noMention: "You haven't tagged any member to add to group tag",
-			addedSuccess: "Added members:\n%1\nto group tag \"%2\"",
-			addedSuccess2: "Added group tag \"%1\" with members:\n%2",
-			existedInGroupTag: "Members:\n%1\nalready existed in group tag \"%2\"",
-			notExistedInGroupTag: "Members:\n%1\ndoesn't exist in group tag \"%2\"",
-			noExistedGroupTag: "Group tag \"%1\" doesn't exist in your group chat",
-			noExistedGroupTag2: "Your group chat hasn't added any group tag",
-			noMentionDel: "Please tag members to remove from group tag \"%1\"",
-			deletedSuccess: "Deleted members:\n%1\nfrom group tag \"%2\"",
-			deletedSuccess2: "Deleted group tag \"%1\"",
-			tagged: "Tag group \"%1\":\n%2",
-			noGroupTagName2: "Please enter old group tag name and new group tag name, separated by \"|\"",
-			renamedSuccess: "Renamed group tag \"%1\" to \"%2\"",
-			infoGroupTag: "📑 | Group name: \"%1\"\n👥 | Number of members: %2\n👨‍👩‍👧‍👦 | List of members:\n %3"
-		}
-	},
+	description: "Fɪʟᴛᴇʀ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs ʙʏ ɴᴜᴍʙᴇʀ ᴏғ ᴍᴇssᴀɢᴇs ᴏʀ ʟᴏᴄᴋᴇᴅ ᴀᴄᴄ 🔒",
+	guide: "   {pn} [<ɴᴜᴍʙᴇʀ ᴏғ ᴍᴇssᴀɢᴇs> | die]",
+	text: {
+		needAdmin: "⚠️ | Pʟᴇᴀsᴇ ᴀᴅᴅ ʙᴏᴛ ᴀs ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ",
+		confirm: "⚠️ | Aʀᴇ ʏᴏᴜ sᴜʀᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴇʟᴇᴛᴇ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀs wɪᴛʜ ʟᴇss ᴛʜᴀɴ %1 ᴍᴇssᴀɢᴇs?\nReact ᴛᴏ ᴛʜɪs ᴍᴇssᴀɢᴇ ᴛᴏ ᴄᴏɴғɪʀᴍ ✅",
+		kickByBlock: "✅ | Sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ %1 ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ʟᴏᴄᴋᴇᴅ 🔒",
+		kickByMsg: "✅ | Sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ %1 ᴍᴇᴍʙᴇʀs wɪᴛʜ ʟᴇss ᴛʜᴀɴ %2 ᴍᴇssᴀɢᴇs 💬",
+		kickError: "❌ | Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴀɴᴅ ᴄᴏᴜʟᴅ ɴᴏᴛ ᴋɪᴄᴋ %1 ᴍᴇᴍʙᴇʀs:\n%2",
+		noBlock: "✅ | Tʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ʟᴏᴄᴋᴇᴅ 🔒",
+		noMsg: "✅ | Tʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴍᴇᴍʙᴇʀs wɪᴛʜ ʟᴇss ᴛʜᴀɴ %1 ᴍᴇssᴀɢᴇs 💬"
+	}
+},
+
+getfbstate: {
+	description: "Gᴇᴛ ᴄᴜʀʀᴇɴᴛ Fʙsᴛᴀᴛᴇ 📩",
+	guide: "{pn}",
+	text: {
+		success: "✅ | Sᴇɴᴛ Fʙsᴛᴀᴛᴇ ᴛᴏ ʏᴏᴜ, ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʙᴏᴛ'ꜱ ᴘʀɪᴠᴀᴛᴇ ᴍᴇssᴀɢᴇ 💌"
+	}
+},
+
+grouptag: {
+	description: "Tᴀɢ ᴍᴇᴍʙᴇʀs ʙʏ ɢʀᴏᴜᴘ 🏷️",
+	guide: "   {pn} add <ɢʀᴏᴜᴘTᴀɢɴᴀᴍᴇ> <@tags>: ᴀᴅᴅ ɴᴇᴡ ɢʀᴏᴜᴘ ᴛᴀɢ ᴏʀ ᴀᴅᴅ ᴍᴇᴍʙᴇʀs ᴛᴏ ɢʀᴏᴜᴘ ᴛᴀɢ\n   Example:\n    {pn} TEAM1 @tag1 @tag2\n\n   {pn} del <ɢʀᴏᴜᴘTᴀɢɴᴀᴍᴇ> <@tags>: ʀᴇᴍᴏᴠᴇ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ɢʀᴏᴜᴘ ᴛᴀɢ\n   Example:\n    {pn} del TEAM1 @tag1 @tag2\n\n   {pn} remove <ɢʀᴏᴜᴘTᴀɢɴᴀᴍᴇ>: ʀᴇᴍᴏᴠᴇ ɢʀᴏᴜᴘ ᴛᴀɢ\n   Example:\n    {pn} remove TEAM1\n\n   {pn} rename <ɢʀᴏᴜᴘTᴀɢɴᴀᴍᴇ> | <ɴᴇᴡɢʀᴏᴜᴘTᴀɢɴᴀᴍᴇ>: ʀᴇɴᴀᴍᴇ ɢʀᴏᴜᴘ ᴛᴀɢ\n\n   {pn} [list | all]: ᴠɪᴇᴡ ʟɪsᴛ ᴏғ ɢʀᴏᴜᴘ ᴛᴀɢs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ\n\n   {pn} info <ɢʀᴏᴜᴘTᴀɢɴᴀᴍᴇ>: ᴠɪᴇᴡ ɪɴғᴏ ᴏғ ɢʀᴏᴜᴘ ᴛᴀɢ",
+	text: {
+		noGroupTagName: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ɢʀᴏᴜᴘ ᴛᴀɢ ɴᴀᴍᴇ",
+		noMention: "⚠️ | Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴛᴀɢɢᴇᴅ ᴀɴʏ ᴍᴇᴍʙᴇʀ ᴛᴏ ᴀᴅᴅ ᴛᴏ ɢʀᴏᴜᴘ ᴛᴀɢ",
+		addedSuccess: "✅ | Aᴅᴅᴇᴅ ᴍᴇᴍʙᴇʀs:\n%1\ntᴏ ɢʀᴏᴜᴘ ᴛᴀɢ \"%2\"",
+		addedSuccess2: "✅ | Aᴅᴅᴇᴅ ɢʀᴏᴜᴘ ᴛᴀɢ \"%1\" wɪᴛʜ ᴍᴇᴍʙᴇʀs:\n%2",
+		existedInGroupTag: "ℹ️ | Mᴇᴍʙᴇʀs:\n%1\nᴀʟʀᴇᴀᴅʏ ᴇxɪsᴛ ɪɴ ɢʀᴏᴜᴘ ᴛᴀɢ \"%2\"",
+		notExistedInGroupTag: "⚠️ | Mᴇᴍʙᴇʀs:\n%1\ɴᴏᴛ ᴇxɪsᴛ ɪɴ ɢʀᴏᴜᴘ ᴛᴀɢ \"%2\"",
+		noExistedGroupTag: "⚠️ | Gʀᴏᴜᴘ ᴛᴀɢ \"%1\" ᴅᴏᴇsɴ'ᴛ ᴇxɪsᴛ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ",
+		noExistedGroupTag2: "⚠️ | Yᴏᴜʀ ɢʀᴏᴜᴘ ᴄʜᴀᴛ ʜᴀsɴ'ᴛ ᴀᴅᴅᴇᴅ ᴀɴʏ ɢʀᴏᴜᴘ ᴛᴀɢs",
+		noMentionDel: "⚠️ | Pʟᴇᴀsᴇ ᴛᴀɢ ᴍᴇᴍʙᴇʀs ᴛᴏ ʀᴇᴍᴏᴠᴇ ғʀᴏᴍ ɢʀᴏᴜᴘ ᴛᴀɢ \"%1\"",
+		deletedSuccess: "✅ | Dᴇʟᴇᴛᴇᴅ ᴍᴇᴍʙᴇʀs:\n%1\nғʀᴏᴍ ɢʀᴏᴜᴘ ᴛᴀɢ \"%2\"",
+		deletedSuccess2: "✅ | Dᴇʟᴇᴛᴇᴅ ɢʀᴏᴜᴘ ᴛᴀɢ \"%1\"",
+		tagged: "🏷️ | Tᴀɢ ɢʀᴏᴜᴘ \"%1\":\n%2",
+		noGroupTagName2: "⚠️ | Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴏʟᴅ ɢʀᴏᴜᴘ ᴛᴀɢ ɴᴀᴍᴇ ᴀɴᴅ ɴᴇᴡ ɢʀᴏᴜᴘ ᴛᴀɢ ɴᴀᴍᴇ, sᴇᴘᴀʀᴀᴛᴇᴅ ʙʏ \"|\"",
+		renamedSuccess: "✅ | Rᴇɴᴀᴍᴇᴅ ɢʀᴏᴜᴘ ᴛᴀɢ \"%1\" ᴛᴏ \"%2\"",
+		infoGroupTag: "📑 | Gʀᴏᴜᴘ ɴᴀᴍᴇ: \"%1\"\n👥 | Nᴜᴍʙᴇʀ ᴏғ ᴍᴇᴍʙᴇʀs: %2\n👨‍👩‍👧‍👦 | Lɪsᴛ ᴏғ ᴍᴇᴍʙᴇʀs:\n %3"
+	}
+},
 	help: {
-		description: "View command usage",
-		guide: "{pn} [empty | <page number> | <command name>]",
-		text: {
-			help: "╭─────────────⭓\n%1\n├─────⭔\n│ Page [ %2/%3 ]\n│ Currently, the bot has %4 commands that can be used\n│ » Type %5help <page> to view the command list\n│ » Type %5help to view the details of how to use that command\n├────────⭔\n│ %6\n╰─────────────⭓",
-			help2: "%1├───────⭔\n│ » Currently, the bot has %2 commands that can be used\n│ » Type %3help <command name> to view the details of how to use that command\n│ %4\n╰─────────────⭓",
-			commandNotFound: "Command \"%1\" does not exist",
-			getInfoCommand: "╭── NAME ────⭓\n│ %1\n├── INFO\n│ Description: %2\n│ Other names: %3\n│ Other names in your group: %4\n│ Version: %5\n│ Role: %6\n│ Time per command: %7s\n│ Author: %8\n├── Usage\n%9\n├── Notes\n│ The content inside <XXXXX> can be changed\n│ The content inside [a|b|c] is a or b or c\n╰──────⭔",
-			doNotHave: "Do not have",
-			roleText0: "0 (All users)",
-			roleText1: "1 (Group administrators)",
-			roleText2: "2 (Admin bot)",
-			roleText0setRole: "0 (set role, all users)",
-			roleText1setRole: "1 (set role, group administrators)",
-			pageNotFound: "Page %1 does not exist"
-		}
-	},
-	kick: {
-		description: "Kick member out of chat box",
-		guide: "{pn} @tags: use to kick members who are tagged"
-	},
-	loadconfig: {
-		description: "Reload config of bot"
-	},
-	moon: {
-		description: "view moon image on the night you choose (dd/mm/yyyy)",
-		guide: "  {pn} <day/month/year>\n   {pn} <day/month/year> <caption>",
-		text: {
-			invalidDateFormat: "Please enter a valid date in DD/MM/YYYY format",
-			error: "An error occurred while getting the moon image of %1",
-			invalidDate: "%1 is not a valid date",
-			caption: "- Moon image on %1"
-		}
-	},
-	notification: {
-		description: "Send notification from admin to all box",
-		guide: "{pn} <tin nhắn>",
-		text: {
-			missingMessage: "Please enter the message you want to send to all groups",
-			notification: "Notification from admin bot to all chat groups (do not reply to this message)",
-			sendingNotification: "Start sending notification from admin bot to %1 chat groups",
-			sentNotification: "✅ Sent notification to %1 groups successfully",
-			errorSendingNotification: "An error occurred while sending to %1 groups:\n %2"
-		}
-	},
+	description: "Vɪᴇᴡ ᴄᴏᴍᴍᴀɴᴅ ᴜsᴀɢᴇ 📜",
+	guide: "{pn} [empty | <page number> | <command name>]",
+	text: {
+		help: "╭─────────────⭓\n%1\n├─────⭔\n│ Pᴀɢᴇ [ %2/%3 ]\n│ Cᴜʀʀᴇɴᴛʟʏ, ᴛʜᴇ ʙᴏᴛ ʜᴀs %4 ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ\n│ » Tʏᴘᴇ %5help <page> ᴛᴏ ᴠɪᴇᴡ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ\n│ » Tʏᴘᴇ %5help ᴛᴏ ᴠɪᴇᴡ ᴛʜᴇ ᴅᴇᴛᴀɪʟs ᴏғ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ\n├────────⭔\n│ %6\n╰─────────────⭓",
+		help2: "%1├───────⭔\n│ » Cᴜʀʀᴇɴᴛʟʏ, ᴛʜᴇ ʙᴏᴛ ʜᴀs %2 ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ\n│ » Tʏᴘᴇ %3help <command name> ᴛᴏ ᴠɪᴇᴡ ᴛʜᴇ ᴅᴇᴛᴀɪʟs ᴏғ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ\n│ %4\n╰─────────────⭓",
+		commandNotFound: "❌ Cᴏᴍᴍᴀɴᴅ \"%1\" ᴅᴏᴇs ɴᴏᴛ ᴇxɪsᴛ",
+		getInfoCommand: "╭── Nᴀᴍᴇ ────⭓\n│ %1\n├── IɴFᴏ\n│ Dᴇsᴄʀɪᴘᴛɪᴏɴ: %2\n│ Oᴛʜᴇʀ ɴᴀᴍᴇs: %3\n│ Oᴛʜᴇʀ ɴᴀᴍᴇs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ: %4\n│ Vᴇʀsɪᴏɴ: %5\n│ Rᴏʟᴇ: %6\n│ Tɪᴍᴇ ᴘᴇʀ ᴄᴏᴍᴍᴀɴᴅ: %7s\n│ Aᴜᴛʜᴏʀ: %8\n├── Usᴀɢᴇ\n%9\n├── Nᴏᴛᴇs\n│ Tʜᴇ ᴄᴏɴᴛᴇɴᴛ ɪɴsɪᴅᴇ <XXXXX> ᴄᴀɴ ʙᴇ ᴄʜᴀɴɢᴇᴅ\n│ Tʜᴇ ᴄᴏɴᴛᴇɴᴛ ɪɴsɪᴅᴇ [a|b|c] ɪs a ᴏʀ b ᴏʀ c\n╰──────⭔",
+		doNotHave: "❌ Dᴏ ɴᴏᴛ ʜᴀᴠᴇ",
+		roleText0: "0 (All users)",
+		roleText1: "1 (Group administrators)",
+		roleText2: "2 (Admin bot)",
+		roleText0setRole: "0 (set role, all users)",
+		roleText1setRole: "1 (set role, group administrators)",
+		pageNotFound: "⚠️ Pᴀɢᴇ %1 ᴅᴏᴇs ɴᴏᴛ ᴇxɪsᴛ"
+	}
+},
+
+kick: {
+	description: "Kɪᴄᴋ ᴍᴇᴍʙᴇʀ ᴏᴜᴛ ᴏғ ᴄʜᴀᴛ ʙᴏx 👢",
+	guide: "{pn} @tags: ᴜsᴇ ᴛᴏ ᴋɪᴄᴋ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ᴛᴀɢɢᴇᴅ"
+},
+
+loadconfig: {
+	description: "Rᴇʟᴏᴀᴅ ᴄᴏɴғɪɢ ᴏғ ʙᴏᴛ 🔄"
+},
+
+moon: {
+	description: "Vɪᴇᴡ 🌙 ᴍᴏᴏɴ ɪᴍᴀɢᴇ ᴏɴ ᴛʜᴇ ɴɪɢʜᴛ ʏᴏᴜ ᴄʜᴏᴏsᴇ (dd/mm/yyyy)",
+	guide: "  {pn} <day/month/year>\n   {pn} <day/month/year> <caption>",
+	text: {
+		invalidDateFormat: "⚠️ Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴀ ᴠᴀʟɪᴅ ᴅᴀᴛᴇ ɪɴ DD/MM/YYYY ғᴏʀᴍᴀᴛ",
+		error: "❌ Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ ɢᴇᴛᴛɪɴɢ ᴛʜᴇ ᴍᴏᴏɴ ɪᴍᴀɢᴇ ᴏғ %1",
+		invalidDate: "⚠️ %1 ɪs ɴᴏᴛ ᴀ ᴠᴀʟɪᴅ ᴅᴀᴛᴇ",
+		caption: "- Mᴏᴏɴ ɪᴍᴀɢᴇ ᴏɴ %1 🌙"
+	}
+},
+
+notification: {
+	description: "Sᴇɴᴅ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ғʀᴏᴍ ᴀᴅᴍɪɴ ᴛᴏ ᴀʟʟ ʙᴏx 🔔",
+	guide: "{pn} <message>",
+	text: {
+		missingMessage: "⚠️ Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛʜᴇ ᴍᴇssᴀɢᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sᴇɴᴅ ᴛᴏ ᴀʟʟ ɢʀᴏᴜᴘs",
+		notification: "📣 Nᴏᴛɪғɪᴄᴀᴛɪᴏɴ ғʀᴏᴍ ᴀᴅᴍɪɴ ʙᴏᴛ ᴛᴏ ᴀʟʟ ᴄʜᴀᴛ ɢʀᴏᴜᴘs (ᴅᴏ ɴᴏᴛ ʀᴇᴘʟʏ ᴛᴏ ᴛʜɪs ᴍᴇssᴀɢᴇ)",
+		sendingNotification: "⏳ Sᴛᴀʀᴛ sᴇɴᴅɪɴɢ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ғʀᴏᴍ ᴀᴅᴍɪɴ ʙᴏᴛ ᴛᴏ %1 ᴄʜᴀᴛ ɢʀᴏᴜᴘs",
+		sentNotification: "✅ Sᴇɴᴛ ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴ ᴛᴏ %1 ɢʀᴏᴜᴘs sᴜᴄᴄᴇssғᴜʟʟʏ",
+		errorSendingNotification: "❌ Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ ᴡʜɪʟᴇ sᴇɴᴅɪɴɢ ᴛᴏ %1 ɢʀᴏᴜᴘs:\n %2"
+	}
+},
 	prefix: {
-		description: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
-		guide: "   {pn} <new prefix>: change new prefix in your box chat\n   Example:\n    {pn} #\n\n   {pn} <new prefix> -g: change new prefix in system bot (only admin bot)\n   Example:\n    {pn} # -g\n\n   {pn} reset: change prefix in your box chat to default",
-		text: {
-			reset: "Your prefix has been reset to default: %1",
-			onlyAdmin: "Only admin can change prefix of system bot",
-			confirmGlobal: "Please react to this message to confirm change prefix of system bot",
-			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
-			successGlobal: "Changed prefix of system bot to: %1",
-			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
-		}
-	},
-	rank: {
-		description: "View your level or the level of the tagged person. You can tag many people"
-	},
-	rankup: {
-		description: "Turn on/off level up notification",
-		guide: "{pn} [on | off]",
-		text: {
-			syntaxError: "Syntax error, only use {pn} on or {pn} off",
-			turnedOn: "Turned on level up notification",
-			turnedOff: "Turned off level up notification",
-			notiMessage: "🎉🎉 Congratulations on reaching level %1"
-		}
-	},
-	refresh: {
-		description: "refresh information of group chat or user",
-		guide: "   {pn} [thread | group]: refresh information of your group chat\n   {pn} group <threadID>: refresh information of group chat by ID\n\n   {pn} user: refresh information of your user\n   {pn} user [<userID> | @tag]: refresh information of user by ID",
-		text: {
-			refreshMyThreadSuccess: "✅ | Refresh information of your group chat successfully!",
-			refreshThreadTargetSuccess: "✅ | Refresh information of group chat %1 successfully!"
-		}
-	},
-	rules: {
-		description: "Create/view/add/edit/change position/delete group rules of you",
-		guide: "   {pn} [add | -a] <rule to add>: add rule for group.\n   {pn}: view group rules.\n   {pn} [edit | -e] <n> <content after edit>: edit rule number n.\n   {pn} [move | -m] <stt1> <stt2> swap position of rule number <stt1> and <stt2>.\n   {pn} [delete | -d] <n>: delete rule number n.\n   {pn} [remove | -r]: delete all rules of group.\n\n   Example:\n    {pn} add don't spam\n    {pn} move 1 3\n    {pn} -e 1 don't spam message in group\n    {pn} -r"
-	},
-	sendnoti: {
-		description: "Create and send notification to groups that you manage",
-		guide: "   {pn} create <groupName>: Create a new notification group with name <groupName>\n   Example:\n    {pn} create TEAM1\n\n   {pn} add <groupName>: add current box chat to notification group <groupName> (you must be admin of this box chat)\n   Example:\n    {pn} add TEAM1\n\n   {pn} delete: remove current box chat from notification group <groupName> (you must be creator of this group)\n   Example:\n    {pn} delete TEAM1\n\n   {pn} send <groupName> | <message>: send notification to all groups in notification group <groupName> (you must be admin of those groups)\n   Example:\n    {pn} remove TEAM1\n\n   {pn} remove <groupName>: remove notification group <groupName> (you must be creator of notification group <groupName>)\n   Example:\n    {pn} remove TEAM1",
-		text: {
-			missingGroupName: "Please enter groupNoti name",
-			groupNameExists: "Notification group with name %1 has been created by you before, please choose another name",
-			createdGroup: "Created notification group successfully:\n- Name: %1\n- ID: %2",
-			missingGroupNameToAdd: "Please enter groupNoti name you want to add this group chat to",
-			groupNameNotExists: "You have not created/manage any notification group with name: %1",
-			notAdmin: "You are not admin of this group chat",
-			added: "Added current group chat to notification group: %1",
-			missingGroupNameToDelete: "Please enter groupNoti name you want to delete this group chat from list",
-			notInGroup: "Current group chat is not in notification group %1",
-			deleted: "Deleted current group chat from notification group: %1",
-			failed: "Failed to send notification to %1 group chats: \n%2",
-			missingGroupNameToRemove: "Please enter groupNoti name you want to remove",
-			removed: "Removed notification group: %1",
-			missingGroupNameToSend: "Please enter groupNoti name you want to send message",
-			groupIsEmpty: "Notification group \"%1\" is empty",
-			sending: "Sending notification to %1 group chats",
-			success: "Sent notification to %1 group chats in notification group \"%2\" successfully",
-			notAdminOfGroup: "You are not admin of this group",
-			missingGroupNameToView: "Please enter groupNoti name you want to view info",
-			groupInfo: "- Group Name: %1\n - ID: %2\n - Created at: %3\n%4 ",
-			groupInfoHasGroup: "- Has group chats: \n%1",
-			noGroup: "You have not created/manage any notification group"
-		}
-	},
+	description: "⚡ Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
+	guide: "   {pn} <new prefix>: change new prefix in your box chat\n   Example:\n    {pn} #\n\n   {pn} <new prefix> -g: change new prefix in system bot (only admin bot)\n   Example:\n    {pn} # -g\n\n   {pn} reset: change prefix in your box chat to default",
+	text: {
+		reset: "✅ | Your prefix has been reset to default: %1",
+		onlyAdmin: "⚠️ | Only admin can change prefix of system bot",
+		confirmGlobal: "⚠️ | Please react to this message to confirm change prefix of system bot",
+		confirmThisThread: "⚠️ | Please react to this message to confirm change prefix in your box chat",
+		successGlobal: "✅ | Changed prefix of system bot to: %1",
+		successThisThread: "✅ | Changed prefix in your box chat to: %1",
+		myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
+	}
+},
+rank: {
+	description: "🚀 View your level or the level of the tagged person. You can tag many people"
+},
+rankup: {
+	description: "🔔 Turn on/off level up notification",
+	guide: "{pn} [on | off]",
+	text: {
+		syntaxError: "❌ Syntax error, only use {pn} on or {pn} off",
+		turnedOn: "✅ Turned on level up notification",
+		turnedOff: "✅ Turned off level up notification",
+		notiMessage: "🎉🎉 Congratulations on reaching level %1"
+	}
+},
+refresh: {
+	description: "♻️ refresh information of group chat or user",
+	guide: "   {pn} [thread | group]: refresh information of your group chat\n   {pn} group <threadID>: refresh information of group chat by ID\n\n   {pn} user: refresh information of your user\n   {pn} user [<userID> | @tag]: refresh information of user by ID",
+	text: {
+		refreshMyThreadSuccess: "✅ | Refresh information of your group chat successfully!",
+		refreshThreadTargetSuccess: "✅ | Refresh information of group chat %1 successfully!"
+	}
+},
+rules: {
+	description: "📜 Create/view/add/edit/change position/delete group rules of you",
+	guide: "   {pn} [add | -a] <rule to add>: add rule for group.\n   {pn}: view group rules.\n   {pn} [edit | -e] <n> <content after edit>: edit rule number n.\n   {pn} [move | -m] <stt1> <stt2> swap position of rule number <stt1> and <stt2>.\n   {pn} [delete | -d] <n>: delete rule number n.\n   {pn} [remove | -r]: delete all rules of group.\n\n   Example:\n    {pn} add don't spam\n    {pn} move 1 3\n    {pn} -e 1 don't spam message in group\n    {pn} -r"
+},
+sendnoti: {
+	description: "📣 Create and send notification to groups that you manage",
+	guide: "   {pn} create <groupName>: Create a new notification group with name <groupName>\n   Example:\n    {pn} create TEAM1\n\n   {pn} add <groupName>: add current box chat to notification group <groupName> (you must be admin of this box chat)\n   Example:\n    {pn} add TEAM1\n\n   {pn} delete: remove current box chat from notification group <groupName> (you must be creator of this group)\n   Example:\n    {pn} delete TEAM1\n\n   {pn} send <groupName> | <message>: send notification to all groups in notification group <groupName> (you must be admin of those groups)\n   Example:\n    {pn} remove TEAM1\n\n   {pn} remove <groupName>: remove notification group <groupName> (you must be creator of notification group <groupName>)\n   Example:\n    {pn} remove TEAM1",
+	text: {
+		missingGroupName: "⚠️ | Please enter groupNoti name",
+		groupNameExists: "❌ | Notification group with name %1 has been created by you before, please choose another name",
+		createdGroup: "✅ | Created notification group successfully:\n- Name: %1\n- ID: %2",
+		missingGroupNameToAdd: "⚠️ | Please enter groupNoti name you want to add this group chat to",
+		groupNameNotExists: "❌ | You have not created/manage any notification group with name: %1",
+		notAdmin: "⚠️ | You are not admin of this group chat",
+		added: "✅ | Added current group chat to notification group: %1",
+		missingGroupNameToDelete: "⚠️ | Please enter groupNoti name you want to delete this group chat from list",
+		notInGroup: "❌ | Current group chat is not in notification group %1",
+		deleted: "✅ | Deleted current group chat from notification group: %1",
+		failed: "❌ | Failed to send notification to %1 group chats: \n%2",
+		missingGroupNameToRemove: "⚠️ | Please enter groupNoti name you want to remove",
+		removed: "✅ | Removed notification group: %1",
+		missingGroupNameToSend: "⚠️ | Please enter groupNoti name you want to send message",
+		groupIsEmpty: "⚠️ | Notification group \"%1\" is empty",
+		sending: "📤 | Sending notification to %1 group chats",
+		success: "✅ | Sent notification to %1 group chats in notification group \"%2\" successfully",
+		notAdminOfGroup: "⚠️ | You are not admin of this group",
+		missingGroupNameToView: "⚠️ | Please enter groupNoti name you want to view info",
+		groupInfo: "📑 | - Group Name: %1\n - ID: %2\n - Created at: %3\n%4 ",
+		groupInfoHasGroup: "👥 | - Has group chats: \n%1",
+		noGroup: "❌ | You have not created/manage any notification group"
+	}
+},
 	setalias: {
 		description: "Add an alias for any command in your group",
 		guide: "  This command is used to add/remove alias for any command in your group\n   {pn} add <alias> <command>: add an alias for the command in your group\n   {pn} add <alias> <command> -g: add an alias for the command in the whole system (only bot admin)\nExample:\n    {pn} add ctrk customrankcard\n\n   {pn} [remove | rm] <alias> <command>: remove an alias for the command in your group\n   {pn} [remove | rm] <alias> <command> -g: remove an alias for the command in the whole system (only bot admin)\nExample:\n    {pn} rm ctrk customrankcard\n\n   {pn} list: list all alias for commands in your group\n   {pn} list -g: list all alias for commands in the whole system"
