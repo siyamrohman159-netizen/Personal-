@@ -670,58 +670,57 @@ sendnoti: {
 		}
 	},
 	warn: {
-		description: "warn member in group, if they have 3 warns, they will be banned",
-		guide: "   {pn} @tag <reason>: warn member\n   {pn} list: view list of warned members\n   {pn} listban: view list of banned members\n   {pn} info [@tag | <uid> | leave blank]: view warn info of tagged member or uid or yourself\n   {pn} unban <uid>: unban member by uid\n   {pn} unwarn <uid> [<warn number> | leave blank]: unwarn member by uid and warn number\n   {pn} warn reset: reset all warn data\n⚠️ You need to set admin for bot to auto kick banned members",
-		text: {
-			list: "List of members who have been warned:\n%1\n\nTo view the details of the warnings, use the \"%2warn info [@tag | <uid> | leave blank]\" command: to view the warning information of the tagged person or uid or yourself",
-			listBan: "List of members who have been warned 3 times and banned from the box:\n%1",
-			listEmpty: "Your group has no members who have been warned",
-			listBanEmpty: "Your group has no members banned from the box",
-			invalidUid: "Please enter a valid uid of the person you want to view information",
-			noData: "No data",
-			noPermission: "❌ Only group administrators can unban members banned from the box",
-			invalidUid2: "⚠️ Please enter a valid uid of the person you want to unban",
-			notBanned: "⚠️ The user with id %1 has not been banned from your box",
-			unbanSuccess: "✅ Successfully unbanned member [%1 | %2], currently this person can join your chat box",
-			noPermission2: "❌ Only group administrators can remove warnings from members in the group",
-			invalidUid3: "⚠️ Please enter a uid or tag the person you want to remove the warning",
-			noData2: "⚠️ The user with id %1 has no warning data",
-			notEnoughWarn: "❌ The user %1 only has %2 warnings",
-			unwarnSuccess: "✅ Successfully removed the %1 warning of member [%2 | %3]",
-			noPermission3: "❌ Only group administrators can reset warning data",
-			resetWarnSuccess: "✅ Successfully reset warning data",
-			noPermission4: "❌ Only group administrators can warn members in the group",
-			invalidUid4: "⚠️ You need to tag or reply to the message of the person you want to warn",
-			warnSuccess: "⚠️ Warned member %1 times %2\n- Uid: %3\n- Reason: %4\n- Date Time: %5\nThis member has been warned 3 times and banned from the box, to unban use the command \"%6warn unban <uid>\" (with uid is the uid of the person you want to unban)",
-			noPermission5: "⚠️ Bot needs administrator permissions to kick banned members",
-			warnSuccess2: "⚠️ Warned member %1 times %2\n- Uid: %3\n- Reason: %4\n- Date Time: %5\nIf this person violates %6 more times, they will be banned from the box",
-			hasBanned: "⚠️ The following members have been warned 3 times before and banned from the box:\n%1",
-			failedKick: "⚠️ An error occurred when kicking the following members:\n%1"
-		}
-	},
-	weather: {
-		description: "view the current and next 5 days weather forecast",
-		guide: "{pn} <location>",
-		text: {
-			syntaxError: "Please enter a location",
-			notFound: "Location not found: %1",
-			error: "An error has occurred: %1",
-			today: "Today's weather:\n%1\n🌡 Low - high temperature %2°C - %3°C\n🌡 Feels like %4°C - %5°C\n🌅 Sunrise %6\n🌄 Sunset %7\n🌃 Moonrise %8\n🏙️ Moonset %9\n🌞 Day: %10\n🌙 Night: %11"
-		}
-	},
-	ytb: {
-		description: "Download video, audio or view video information on YouTube",
-		guide: "   {pn} [video|-v] [<video name>|<video link>]: use to download video from youtube.\n   {pn} [audio|-a] [<video name>|<video link>]: use to download audio from youtube\n   {pn} [info|-i] [<video name>|<video link>]: use to view video information from youtube\n   Example:\n    {pn} -v Fallen Kingdom\n    {pn} -a Fallen Kingdom\n    {pn} -i Fallen Kingdom",
-		text: {
-			error: "An error has occurred: %1",
-			noResult: "No search results match the keyword %1",
-			choose: "%1Reply to the message with the number to choose or any content to cancel",
-			downloading: "Downloading video %1",
-			noVideo: "Sorry, no video was found with a size less than 83MB",
-			downloadingAudio: "Downloading audio %1",
-			noAudio: "Sorry, no audio was found with a size less than 26MB",
-			info: "💠 Title: %1\n🏪 Channel: %2\n👨‍👩‍👧‍👦 Subscriber: %3\n⏱ Video time: %4\n👀 View: %5\n👍 Like: %6\n🆙 Upload date: %7\n🔠 ID: %8\n🔗 Link: %9",
-			listChapter: "\n📖 List chapter: %1\n"
-		}
+	description: "⚠️ Warn member in group, if they have 3 warns, they will be banned",
+	guide: "   {pn} @tag <reason>: warn member\n   {pn} list: view list of warned members\n   {pn} listban: view list of banned members\n   {pn} info [@tag | <uid> | leave blank]: view warn info of tagged member or uid or yourself\n   {pn} unban <uid>: unban member by uid\n   {pn} unwarn <uid> [<warn number> | leave blank]: unwarn member by uid and warn number\n   {pn} warn reset: reset all warn data\n⚠️ You need to set admin for bot to auto kick banned members",
+	text: {
+		list: "📋 | List of members who have been warned:\n%1\n\nTo view the details of the warnings, use the \"%2warn info [@tag | <uid> | leave blank]\" command: to view the warning information of the tagged person or uid or yourself",
+		listBan: "📋 | List of members who have been warned 3 times and banned from the box:\n%1",
+		listEmpty: "❌ | Your group has no members who have been warned",
+		listBanEmpty: "❌ | Your group has no members banned from the box",
+		invalidUid: "⚠️ | Please enter a valid uid of the person you want to view information",
+		noData: "⚠️ | No data",
+		noPermission: "❌ | Only group administrators can unban members banned from the box",
+		invalidUid2: "⚠️ | Please enter a valid uid of the person you want to unban",
+		notBanned: "⚠️ | The user with id %1 has not been banned from your box",
+		unbanSuccess: "✅ | Successfully unbanned member [%1 | %2], currently this person can join your chat box",
+		noPermission2: "❌ | Only group administrators can remove warnings from members in the group",
+		invalidUid3: "⚠️ | Please enter a uid or tag the person you want to remove the warning",
+		noData2: "⚠️ | The user with id %1 has no warning data",
+		notEnoughWarn: "❌ | The user %1 only has %2 warnings",
+		unwarnSuccess: "✅ | Successfully removed the %1 warning of member [%2 | %3]",
+		noPermission3: "❌ | Only group administrators can reset warning data",
+		resetWarnSuccess: "✅ | Successfully reset warning data",
+		noPermission4: "❌ | Only group administrators can warn members in the group",
+		invalidUid4: "⚠️ | You need to tag or reply to the message of the person you want to warn",
+		warnSuccess: "⚠️ | Warned member %1 times %2\n- Uid: %3\n- Reason: %4\n- Date Time: %5\nThis member has been warned 3 times and banned from the box, to unban use the command \"%6warn unban <uid>\" (with uid is the uid of the person you want to unban)",
+		noPermission5: "⚠️ | Bot needs administrator permissions to kick banned members",
+		warnSuccess2: "⚠️ | Warned member %1 times %2\n- Uid: %3\n- Reason: %4\n- Date Time: %5\nIf this person violates %6 more times, they will be banned from the box",
+		hasBanned: "⚠️ | The following members have been warned 3 times before and banned from the box:\n%1",
+		failedKick: "⚠️ | An error occurred when kicking the following members:\n%1"
+	}
+},
+weather: {
+	description: "🌦️ | View the current and next 5 days weather forecast",
+	guide: "{pn} <location>",
+	text: {
+		syntaxError: "⚠️ | Please enter a location",
+		notFound: "❌ | Location not found: %1",
+		error: "⚠️ | An error has occurred: %1",
+		today: "🌤️ Today's weather:\n%1\n🌡 Low - high temperature %2°C - %3°C\n🌡 Feels like %4°C - %5°C\n🌅 Sunrise %6\n🌄 Sunset %7\n🌃 Moonrise %8\n🏙️ Moonset %9\n🌞 Day: %10\n🌙 Night: %11"
+	}
+},
+ytb: {
+	description: "🎬 | Download video, audio or view video information on YouTube",
+	guide: "   {pn} [video|-v] [<video name>|<video link>]: use to download video from youtube.\n   {pn} [audio|-a] [<video name>|<video link>]: use to download audio from youtube\n   {pn} [info|-i] [<video name>|<video link>]: use to view video information from youtube\n   Example:\n    {pn} -v Fallen Kingdom\n    {pn} -a Fallen Kingdom\n    {pn} -i Fallen Kingdom",
+	text: {
+		error: "⚠️ | An error has occurred: %1",
+		noResult: "❌ | No search results match the keyword %1",
+		choose: "📌 | %1Reply to the message with the number to choose or any content to cancel",
+		downloading: "⬇️ | Downloading video %1",
+		noVideo: "❌ | Sorry, no video was found with a size less than 83MB",
+		downloadingAudio: "🎧 | Downloading audio %1",
+		noAudio: "❌ | Sorry, no audio was found with a size less than 26MB",
+		info: "💠 | Title: %1\n🏪 | Channel: %2\n👨‍👩‍👧‍👦 | Subscriber: %3\n⏱ | Video time: %4\n👀 | View: %5\n👍 | Like: %6\n🆙 | Upload date: %7\n🔠 | ID: %8\n🔗 | Link: %9",
+		listChapter: "\n📖 | List chapter: %1\n"
 	}
 };
