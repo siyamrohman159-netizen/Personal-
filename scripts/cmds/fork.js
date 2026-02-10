@@ -12,9 +12,9 @@ module.exports = {
   },
 
   onStart: async function({ message }) {
-    const text = "✓ | Here is the updated fork:\n\nhttps://github.com/siyamislam1591-cyber/Neo-prime1\n\n" +
+    const text = "✓ | Here is the updated fork:\n\nhttps://github.com/siyuuu-x1/maiko_main_goatbot\n\n" +
                  "Changes:\n all fixed \n\n" +
-                 "🛂";
+                 "🚩⚙️🔓";
     
     message.reply(text);
   }
