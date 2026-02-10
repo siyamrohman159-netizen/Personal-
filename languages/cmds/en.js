@@ -355,4 +355,145 @@ module.exports = {
 			roleText2: "2 (Admin bot)",
 			roleText3: "3 (Developer bot)",
 			roleText0setRole: "0 (set role, all users)",
-			roleText1setRole: "1 (set role, group a
+			roleText1setRole: "1 (set role, group administrators)",
+			pageNotFound: "Page %1 does not exist"
+		}
+	},
+	kick: {
+		description: "Kick member out of chat box",
+		guide: "{pn} @tags: use to kick members who are tagged"
+	},
+	loadconfig: {
+		description: "Reload config of bot"
+	},
+	moon: {
+		description: "view moon image on the night you choose (dd/mm/yyyy)",
+		guide: "  {pn} <day/month/year>\n   {pn} <day/month/year> <caption>",
+		text: {
+			invalidDateFormat: "Please enter a valid date in DD/MM/YYYY format",
+			error: "An error occurred while getting the moon image of %1",
+			invalidDate: "%1 is not a valid date",
+			caption: "- Moon image on %1"
+		}
+	},
+	notification: {
+		description: "Send notification from admin to all box",
+		guide: "{pn} <tin nhắn>",
+		text: {
+			missingMessage: "Please enter the message you want to send to all groups",
+			notification: "Notification from admin bot to all chat groups (do not reply to this message)",
+			sendingNotification: "Start sending notification from admin bot to %1 chat groups",
+			sentNotification: "✅ Sent notification to %1 groups successfully",
+			errorSendingNotification: "An error occurred while sending to %1 groups:\n %2"
+		}
+	},
+	prefix: {
+		description: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
+		guide: "   {pn} <new prefix>: change new prefix in your box chat\n   Example:\n    {pn} #\n\n   {pn} <new prefix> -g: change new prefix in system bot (only admin bot)\n   Example:\n    {pn} # -g\n\n   {pn} reset: change prefix in your box chat to default",
+		text: {
+			reset: "Your prefix has been reset to default: %1",
+			onlyAdmin: "Only admin can change prefix of system bot",
+			confirmGlobal: "Please react to this message to confirm change prefix of system bot",
+			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
+			successGlobal: "Changed prefix of system bot to: %1",
+			successThisThread: "Changed prefix in your box chat to: %1",
+			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
+		}
+	},
+	rank: {
+		description: "View your level or the level of the tagged person. You can tag many people"
+	},
+	rankup: {
+		description: "Turn on/off level up notification",
+		guide: "{pn} [on | off]",
+		text: {
+			syntaxError: "Syntax error, only use {pn} on or {pn} off",
+			turnedOn: "Turned on level up notification",
+			turnedOff: "Turned off level up notification",
+			notiMessage: "🎉🎉 Congratulations on reaching level %1"
+		}
+	},
+	refresh: {
+		description: "refresh information of group chat or user",
+		guide: "   {pn} [thread | group]: refresh information of your group chat\n   {pn} group <threadID>: refresh information of group chat by ID\n\n   {pn} user: refresh information of your user\n   {pn} user [<userID> | @tag]: refresh information of user by ID",
+		text: {
+			refreshMyThreadSuccess: "✅ | Refresh information of your group chat successfully!",
+			refreshThreadTargetSuccess: "✅ | Refresh information of group chat %1 successfully!"
+		}
+	},
+	rules: {
+		description: "Create/view/add/edit/change position/delete group rules of you",
+		guide: "   {pn} [add | -a] <rule to add>: add rule for group.\n   {pn}: view group rules.\n   {pn} [edit | -e] <n> <content after edit>: edit rule number n.\n   {pn} [move | -m] <stt1> <stt2> swap position of rule number <stt1> and <stt2>.\n   {pn} [delete | -d] <n>: delete rule number n.\n   {pn} [remove | -r]: delete all rules of group.\n\n   Example:\n    {pn} add don't spam\n    {pn} move 1 3\n    {pn} -e 1 don't spam message in group\n    {pn} -r"
+	},
+	sendnoti: {
+		description: "Create and send notification to groups that you manage",
+		guide: "   {pn} create <groupName>: Create a new notification group with name <groupName>\n   Example:\n    {pn} create TEAM1\n\n   {pn} add <groupName>: add current box chat to notification group <groupName> (you must be admin of this box chat)\n   Example:\n    {pn} add TEAM1\n\n   {pn} delete: remove current box chat from notification group <groupName> (you must be creator of this group)\n   Example:\n    {pn} delete TEAM1\n\n   {pn} send <groupName> | <message>: send notification to all groups in notification group <groupName> (you must be admin of those groups)\n   Example:\n    {pn} remove TEAM1\n\n   {pn} remove <groupName>: remove notification group <groupName> (you must be creator of notification group <groupName>)\n   Example:\n    {pn} remove TEAM1",
+		text: {
+			missingGroupName: "Please enter groupNoti name",
+			groupNameExists: "Notification group with name %1 has been created by you before, please choose another name",
+			createdGroup: "Created notification group successfully:\n- Name: %1\n- ID: %2",
+			missingGroupNameToAdd: "Please enter groupNoti name you want to add this group chat to",
+			groupNameNotExists: "You have not created/manage any notification group with name: %1",
+			notAdmin: "You are not admin of this group chat",
+			added: "Added current group chat to notification group: %1",
+			missingGroupNameToDelete: "Please enter groupNoti name you want to delete this group chat from list",
+			notInGroup: "Current group chat is not in notification group %1",
+			deleted: "Deleted current group chat from notification group: %1",
+			failed: "Failed to send notification to %1 group chats: \n%2",
+			missingGroupNameToRemove: "Please enter groupNoti name you want to remove",
+			removed: "Removed notification group: %1",
+			missingGroupNameToSend: "Please enter groupNoti name you want to send message",
+			groupIsEmpty: "Notification group \"%1\" is empty",
+			sending: "Sending notification to %1 group chats",
+			success: "Sent notification to %1 group chats in notification group \"%2\" successfully",
+			notAdminOfGroup: "You are not admin of this group",
+			missingGroupNameToView: "Please enter groupNoti name you want to view info",
+			groupInfo: "- Group Name: %1\n - ID: %2\n - Created at: %3\n%4 ",
+			groupInfoHasGroup: "- Has group chats: \n%1",
+			noGroup: "You have not created/manage any notification group"
+		}
+	},
+	setalias: {
+		description: "Add an alias for any command in your group",
+		guide: "  This command is used to add/remove alias for any command in your group\n   {pn} add <alias> <command>: add an alias for the command in your group\n   {pn} add <alias> <command> -g: add an alias for the command in the whole system (only bot admin)\nExample:\n    {pn} add ctrk customrankcard\n\n   {pn} [remove | rm] <alias> <command>: remove an alias for the command in your group\n   {pn} [remove | rm] <alias> <command> -g: remove an alias for the command in the whole system (only bot admin)\nExample:\n    {pn} rm ctrk customrankcard\n\n   {pn} list: list all alias for commands in your group\n   {pn} list -g: list all alias for commands in the whole system"
+	},
+	setavt: {
+		description: "Change bot avatar",
+		text: {
+			cannotGetImage: "❌ | An error occurred while querying the image url",
+			invalidImageFormat: "❌ | Invalid image format",
+			changedAvatar: "✅ | Changed bot avatar successfully"
+		}
+	},
+	setlang: {
+		description: "Set default language of bot for current chat or all chats",
+		guide: "   {pn} <language code ISO 639-1\n   Example:    {pn} en    {pn} vi    {pn} ja",
+		text: {
+			setLangForAll: "Set default language for all chats: %1",
+			setLangForCurrent: "Set default language for current chat: %1",
+			noPermission: "Only bot admin can use this command"
+		}
+	},
+	setleave: {
+		description: "Edit content/turn on/off leave message when member leave your group chat",
+		guide: {
+			body: "   {pn} on: Turn on leave message\n   {pn} off: Turn off leave message\n   {pn} text [<content> | reset]: edit text content or reset to default, available shortcuts:\n  + {userName}: name of member who leave group\n  + {userNameTag}: name of member who leave group (tag)\n  + {boxName}: name of group chat\n  + {type}: leave/kicked by admin\n  + {session}: session in day\n\n   Example:\n    {pn} text {userName} has {type} group, see you again 🤧\n\n   Reply or send a message with file with content {pn} file: to add attachment file to leave message (image, video, audio)\n\nExample:\n   {pn} file reset: reset file",
+			attachment: {
+				[`${process.cwd()}/scripts/cmds/assets/guide/setleave/setleave_en_1.png`]: "https://i.ibb.co/2FKJHJr/guide1.png"
+			}
+		},
+		text: {
+			missingContent: "Please enter content",
+			edited: "Edited leave message content of your group to:\n%1",
+			reseted: "Reseted leave message content",
+			noFile: "No leave message attachment file to reset",
+			resetedFile: "Reseted leave message attachment file successfully",
+			missingFile: "Please reply this message with image/video/audio file",
+			addedFile: "Added %1 attachment file to your leave message"
+		}
+	},
+	setname: {
+		description: "Change nickname of all members in chat or members tagged by a format",
+		guide: {
+			body: "   {pn} <nick name>: change nickname of yourself\n   {pn} @tags <nick name>: change nickname of members tagged\n   {pn} all <nick name>: change nickname of all members in chat\n\nWith available shortcuts:\n   + {userName}: name of member\n   + {userID}: ID of member\n\n   Example: (see image)",
+			attachment: {
