@@ -724,5 +724,5 @@ ytb: {
 		listChapter: "\n📖 | List chapter: %1\n"
 	  	}
 	}
-};
+}
 
