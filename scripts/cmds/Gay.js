@@ -1,76 +1,79 @@
 const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
+const { createCanvas, loadImage } = require("canvas");
+const fs = require("fs-extra");
 
 module.exports = {
   config: {
     name: "gay",
-    aliases: ["g"],
-    version: "1.6",
-    author: "siyuu",
-    countDown: 2,
+    version: "3.1",
+    author: "xalman",
+    countDown: 5,
     role: 0,
-    description: "Generate a gay image with two user IDs.",
+    shortDescription: "Gay canvas with fixed syntax",
+    longDescription: "Places PFPs on background with fixed destructuring and blacklist.",
     category: "fun",
-    guide: {
-      en: "{pn} @mention @mention\nOr {pn} @mention\nOr reply to a message."
-    }
+    guide: "{pn} @tag | {pn} [reply]"
   },
 
-  onStart: async function ({ api, event }) {
+  onStart: async function ({ api, event, args, usersData }) {
+
+    const { threadID, messageID, senderID, mentions, type, messageReply } = event; 
+    
+    let targetID;
+    if (type === "message_reply") {
+      targetID = messageReply.senderID;
+    } else if (Object.keys(mentions).length > 0) {
+      targetID = Object.keys(mentions)[0];
+    } else {
+      return api.sendMessage("❌ Please mention someone or reply to their message to use this command!", threadID, messageID);
+    }
+
+    const blacklistedID = "61587068812520";
+    if (targetID == blacklistedID) {
+      return api.sendMessage("❌ Ei user er upor ei command kaj korbe na!", threadID, messageID);
+    }
+
     try {
-      const mentions = Object.keys(event.mentions || {});
-      let uid1, uid2;
-      let uid1Name, uid2Name;
+      api.sendMessage("Processing...", threadID, messageID);
 
-      // Case 1: Two or more mentions
-      if (mentions.length >= 2) {
-        uid1 = mentions[0];
-        uid2 = mentions[1];
-        uid1Name = event.mentions[uid1];
-        uid2Name = event.mentions[uid2];
-      }
-      // Case 2: One mention
-      else if (mentions.length === 1) {
-        uid1 = event.senderID;
-        uid2 = mentions[0];
-        const userInfo = await api.getUserInfo(uid1);
-        uid1Name = userInfo[uid1]?.name || "User";
-        uid2Name = event.mentions[uid2];
-      }
-      // Case 3: Reply to a message
-      else if (event.messageReply) {
-        uid1 = event.senderID;
-        uid2 = event.messageReply.senderID;
-        const userInfo = await api.getUserInfo([uid1, uid2]);
-        uid1Name = userInfo[uid1]?.name || "User";
-        uid2Name = userInfo[uid2]?.name || "User";
-      }
-      // Case 4: No mention or reply
-      else {
-        return api.sendMessage("Please reply to a message or mention one or two users.", event.threadID, event.messageID);
-      }
-      
-      const url = `https://neokex-apis.onrender.com/gay?uid1=${uid1}&uid2=${uid2}`;
-      const response = await axios.get(url, { responseType: 'arraybuffer' });
-      const filePath = path.join(__dirname, "cache", `gay_${uid1}_${uid2}.jpg`);
-      fs.writeFileSync(filePath, Buffer.from(response.data, "binary"));
+      const backgroundURL = "https://i.ibb.co/Ld1J2cx6/598832374d5c.png";
+      const senderPFPURL = `https://graph.facebook.com/${senderID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+      const targetPFPURL = `https://graph.facebook.com/${targetID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
 
-      const messageBody = `Oh yeah ${uid1Name} 💋 ${uid2Name}`;
-      const messageMentions = [
-        { tag: uid1Name, id: uid1 },
-        { tag: uid2Name, id: uid2 }
-      ];
+      const [bgImg, senderPFP, targetPFP] = await Promise.all([
+        loadImage(backgroundURL),
+        loadImage(senderPFPURL),
+        loadImage(targetPFPURL)
+      ]);
 
-      api.sendMessage({
-        body: messageBody,
-        attachment: fs.createReadStream(filePath),
-        mentions: messageMentions
-      }, event.threadID, () => fs.unlinkSync(filePath), event.messageID);
+      const canvas = createCanvas(bgImg.width, bgImg.height);
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+
+      const drawCirclePFP = (img, x, y, size) => {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+        ctx.closePath();
+        ctx.clip();
+        ctx.drawImage(img, x, y, size, size);
+        ctx.restore();
+      };
+
+      drawCirclePFP(senderPFP, 400, 170, 60); 
+      drawCirclePFP(targetPFP, 210, 180, 60);
+
+      const path = __dirname + `/cache/gay_${senderID}.png`;
+      fs.writeFileSync(path, canvas.toBuffer("image/png"));
+
+      return api.sendMessage({
+        body: `🌈 Gay user ${await usersData.getName(targetID)}!`,
+        attachment: fs.createReadStream(path)
+      }, threadID, () => fs.unlinkSync(path), messageID);
 
     } catch (e) {
-      console.error("Error:", e.message);
-      api.sendMessage("❌ Couldn't generate image. Try again later.", event.threadID, event.messageID);
+      console.error(e);
+      return api.sendMessage("❌ Error: Image generate kora somvob hoyni.", threadID, messageID);
     }
   }
 };
