@@ -5,7 +5,7 @@ const { client } = global;
 module.exports = {
 	config: {
 		name: "adminonly",
-		aliases: ["adonly", "onlyad", "onlyadmin"],
+		aliases: ["adonly", "onlyad"], // ✅ removed "onlyadmin" to avoid conflict
 		version: "1.5",
 		author: "siyuu",
 		countDown: 5,
