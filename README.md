@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="https://files.catbox.moe/2aeex9.jpg" alt="banner" width="100%">
+  <img src="https://i.ibb.co/RQ28H2p/banner.png" alt="banner" width="100%">
 
   <h1>
-    👋 Hi, I'm <span style="color:#00c8ff;">shahariya Ahmmed siyam (siyuuu) </span>
+    👋 Hi, I'm <span style="color:#00c8ff;">Siyam Rohman</span>
   </h1>
 
   <h3>
@@ -75,29 +75,25 @@
 
 <div align="center">
 
-## 📬 Contact With Me
+## 📬 Contact Me
+
+<a href="https://m.me/j/AbZVIj-UFgtt3Rcb/" target="_blank">
+  <img src="https://img.shields.io/badge/Messenger-0084FF?style=for-the-badge&logo=messenger&logoColor=white" />
+</a>
+
+<a href="https://www.facebook.com/share/16x8YsSXyX/" target="_blank">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+</a>
+
+<a href="https://www.instagram.com/siyuu_0.01?igsh=Mzg0MzMwYm40dWhw" target="_blank">
+  <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
+</a>
+
+<a href="https://wa.me/8801603604722" target="_blank">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+</a>
 
 </div>
-
-<p align="center">
-  💬 <strong>Messenger Support Group</strong><br>
-  <a href="https://m.me/j/AbZVIj-UFgtt3Rcb/">Join Now</a>
-</p>
-
-<p align="center">
-  🔵 <strong>Facebook</strong><br>
-  <a href="https://www.facebook.com/share/16x8YsSXyX/">Visit Profile</a>
-</p>
-
-<p align="center">
-  📸 <strong>Instagram</strong><br>
-  <a href="https://www.instagram.com/siyuu_0.01?igsh=Mzg0MzMwYm40dWhw">Follow Me</a>
-</p>
-
-<p align="center">
-  📱 <strong>WhatsApp</strong><br>
-  01603604722
-</p>
 
 ---
 
