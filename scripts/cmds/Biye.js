@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   config: {
     name: "biye",
-    aliases: ["marry", "biya", "engage","marry"], 
+    aliases: ["marry", "biya", "engage"], // duplicate removed
     version: "3.7",
     author: "siyuu",
     countDown: 5,
@@ -18,7 +18,7 @@ module.exports = {
 
   onStart: async function ({ message, event, usersData }) {
     const mention = Object.keys(event.mentions);
-    if (mention.length === 0)
+    if (!mention.length)
       return message.reply("❗ দয়া করে কাউকে mention করো।");
 
     const senderID = event.senderID;
@@ -54,7 +54,7 @@ module.exports = {
       ctx.drawImage(bg, 0, 0, canvasWidth, canvasHeight);
 
       // 👥 Avatar সেটিং
-      const avatarSize = Math.floor(canvasWidth * 0.11); // ছোট আকার
+      const avatarSize = Math.floor(canvasWidth * 0.12); // slightly bigger
       const girlHead = { x: 470, y: 310 }; // বাম চরিত্র
       const boyHead = { x: 690, y: 200 };  // ডান চরিত্র
 
@@ -99,17 +99,13 @@ module.exports = {
           : `💍 ${nameSender} প্রপোজ করেছে ${nameMentioned}-কে 🥰❤️`;
 
       // ✉️ পাঠানো
-      await message.reply(
-        {
-          body: text,
-          attachment: fs.createReadStream(imgPath)
-        },
-        () => fs.unlink(imgPath).catch(() => {}) // ফাইল ডিলিট
-      );
+      await message.reply({
+        body: text,
+        attachment: fs.createReadStream(imgPath)
+      });
 
-      // 🧹 মেমরি ক্লিন
-      canvas.width = canvas.height = 0;
-      global.gc && global.gc();
+      // ফাইল ডিলিট
+      fs.unlink(imgPath).catch(() => {});
 
     } catch (err) {
       console.error("❌ Error in marry command:", err);
