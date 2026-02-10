@@ -15,7 +15,7 @@ module.exports = {
     name: "4k",
     aliases: ["upscale","hd","clear","5k"],
     version: "1.0",
-    author: "Siyuuuub",
+    author: "Siyuuuu",
     category: "image",
     shortDescription: "image clear & 4K",
     longDescription: "picture quality 4K and clear",
