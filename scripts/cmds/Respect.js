@@ -1,7 +1,7 @@
 module.exports = {
   config: {
     name: "respect",
-    aliases: ["r"],
+    aliases: ["respectme"], // safe alias
     version: "1.1",
     author: "siyuu",
     role: 0,
@@ -13,12 +13,12 @@ module.exports = {
     },
     category: "Group",
     guide: {
-      en: "/r"
+      en: "/respectme"
     }
   },
 
   onStart: async function ({ api, event }) {
-    const ownerUID = "61584749395355"; // change to your FB UID
+    const ownerUID = "61587427123882"; // ✅ updated UID
     
     // Check if sender is owner
     if (event.senderID !== ownerUID) {
