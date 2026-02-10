@@ -84,7 +84,7 @@ handlerCheckData.cantCreateThread=❌ Cannot save group %1
 handlerCheckData.cantCreateUser=❌ Cannot save user %1
 
 # bot/handler/handlerEvents.js
-handlerEvents.onlyPrefix=ℹ️ Prefix: %1 | Type %1help
+handlerEvents.onlyPrefix=System prefix: [\] Prefix: [%1] | Type %1help to see available command! ⚙️🚩
 
 handlerEvents.userBanned=🚫 User banned  
 Reason: %1  
