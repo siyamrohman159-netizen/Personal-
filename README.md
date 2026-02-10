@@ -2,7 +2,7 @@
   <img src="https://files.catbox.moe/2aeex9.jpg" alt="banner" width="100%">
 
   <h1>
-    👋 Hi, I'm <span style="color:#00c8ff;">shahariya ahmeed siyam (siyuuu) </span>
+    👋 Hi, I'm <span style="color:#00c8ff;">shahariya Ahmmed siyam (siyuuu) </span>
   </h1>
 
   <h3>
