@@ -1,12 +1,15 @@
-# index.js
+// =======================
+// INDEX.JS
+// =======================
 Goat.newVersionDetected=⚡ Update Available! Current: v%1 | Latest: v%2 → Run %3
 Goat.autoRestart1=🔁 Auto restart in %1
 Goat.autoRestart2=⏰ Cron restart scheduled: %1
 Goat.googleApiTokenExpired=🔐 Google API token expired — renew now: https://developers.google.com/oauthplayground/
-
 version.tooOldVersion=⚠️ Your Goat-Bot version is outdated — update using: %1
 
-# bot/login/login.js
+// =======================
+// BOT/LOGIN/LOGIN.JS
+// =======================
 login.currentlyLogged=🔄 Authenticating...
 login.notFoundDirAccount=📁 Account file not found: %1
 
@@ -58,121 +61,114 @@ login.listenMqttCloseByUser=⛔ MQTT closed by user
 
 login.startBotSuccess=🎉 Bot running successfully
 
-# bot/custom.js
+// =======================
+// BOT/CUSTOM.JS
+// =======================
 custom.refreshedFb_dtsg=✅ fb_dtsg refreshed successfully
 custom.refreshedFb_dtsgError=❌ fb_dtsg refresh failed
 
-# bot/login/loadData.js
+// =======================
+// BOT/LOGIN/LOADDATA.JS
+// =======================
 loadData.loadThreadDataSuccess=📦 Loaded %1 groups
 loadData.loadUserDataSuccess=👤 Loaded %1 users
 loadData.refreshingThreadData=🔄 Updating group data...
 loadData.refreshThreadDataSuccess=✅ Group data updated
 loadData.refreshThreadDataError=❌ Group update failed
 
-# bot/login/loadScripts.js
-loadScripts.loadScriptsError=⚠️ Error loading %1 files
-loadScripts.loadScriptsNotMatchOrigin=⚠️ Modified files detected:
-loadScripts.NOT_FOUND=❌ Missing from original source:
-loadScripts.NOT_MATCH=⚠️ File mismatch:
+// =======================
+// BOT/LOGIN/LOADSCRIPTS.JS
+// =======================
+loadScripts.loadScriptsError=❌ %1 file(s) failed to load
+loadScripts.loadScriptsNotMatchOrigin=⚠️ %1 file(s) do not match original source
+loadScripts.NOT_FOUND=❌ NOT FOUND: %1
+loadScripts.NOT_MATCH=⚠️ DOES NOT MATCH: %1
 
-# bot/login/socketIO.js
-socketIO.connected=🔗 Connected to server
-socketIO.error=❌ Socket connection failed
+// =======================
+// BOT/LOGIN/SOCKETIO.JS
+// =======================
+socketIO.connected=✅ Connected to socket.io server
+socketIO.error=❌ Socket.io connection failed
 
-# bot/handler/handlerCheckData.js
-handlerCheckData.cantCreateThread=❌ Cannot save group %1
-handlerCheckData.cantCreateUser=❌ Cannot save user %1
+// =======================
+// BOT/HANDLER/HANDLERCHECKDATA.JS
+// =======================
+handlerCheckData.cantCreateThread=❌ Cannot write group id '%1' to database
+handlerCheckData.cantCreateUser=❌ Cannot write user id '%1' to database
 
-# bot/handler/handlerEvents.js
+// =======================
+// BOT/HANDLER/HANDLEREVENTS.JS
+// =======================
+handlerEvents.userBanned=🚫 You are banned\n» Reason: %1\n» Time: %2\n» User ID: %3
+handlerEvents.threadBanned=🚫 Group banned\n» Reason: %1\n» Time: %2\n» Thread ID: %3
+handlerEvents.onlyAdminBox=🔒 Admins only
+handlerEvents.onlyAdminBot=❌ Bot admins only
+handlerEvents.onlyDeveloperGlobal=⚙️ Bot developer only
+handlerEvents.onlyVipUserGlobal=💎 VIP users only
+handlerEvents.commandNotFound=❌ Command "%1" not found — type %2help
+handlerEvents.commandNotFoundSuggestion=🤔Command "%1" not found.\nDid you mean %2%1?
+handlerEvents.commandSyntaxError=⚠️ Wrong syntax — type %1help %2
+handlerEvents.onlyAdmin=❌ Admins only for "%1"
+handlerEvents.onlyAdminToUseOnReply=❌ Admins only to reply "%1"
+handlerEvents.onlyAdminToUseOnReaction=❌ Admins only to react "%1"
+handlerEvents.onlyDeveloper=⚙️ Developer only for "%1"
+handlerEvents.onlyVipUser=💎 VIP only for "%1"
+handlerEvents.waitingForCommand=⏱ Wait %1s before using this command
+handlerEvents.errorOccurred=❌ Error [%1] at "%2"\n%3
+handlerEvents.cannotFindCommand=❌ Cannot find "%1" to execute
+handlerEvents.onlyPrefix=🗣️ This is just your Prefix: [%1]. Please type %1help to see available commands! ⚙️🚩
 
-handlerEvents.onlyPrefix=this is  just a my Prefix: [%1] 🗣️. please Type %1help to see available command! ⚙️🚩
+// =======================
+// BOT/AUTOUTIME.JS
+// =======================
+autoUptime.autoUptimeTurnedOn=⏱ AutoUptime mode ON
 
-handlerEvents.userBanned=🚫 User banned  
-Reason: %1  
-Duration: %2  
-ID: %3  
-
-handlerEvents.threadBanned=🔒 Group banned  
-Reason: %1  
-Until: %2  
-ID: %3  
-
-handlerEvents.onlyAdminBox=🛡️ Admin only command
-handlerEvents.onlyAdminBot=👑 Bot owner only
-
-
-handlerEvents.commandNotFound=╭───────────────╮\n❌ Unknown command!\n\n📖 Use %1help to see all commands\n╰───────────────╯
-
-handlerEvents.commandNotFound2=╭───────────────╮\n❌ Command not recognized!\n\n📖 Type %1help to view commands\n╰───────────────╯
-
-handlerEvents.commandNotFoundWithSuggestion=╭───────────────╮\n❌ Wrong command used!\n\n🤔 Did you mean:\n👉 %1%2\n\n📖 Type %1help to see all commands\n╰───────────────╯
-
-handlerEvents.commandNotFoundWithSuggestion=╭───────────────╮
-❌ Wrong command used!
-
-🤔 Did you mean:
-👉 %1%2
-
-📖 Type %1help to see all commands
-╰───────────────╯
-
-
-handlerEvents.commandSyntaxError=⚠️ Incorrect format — %1help %2
-
-handlerEvents.onlyAdmin=🎖️ Admin permission required
-handlerEvents.onlyAdminToUseOnReply=🎖️ Admin only (reply)
-handlerEvents.onlyAdminToUseOnReaction=🎖️ Admin only (reaction)
-
-handlerEvents.onlyAdminBot2=👑 Developer only
-handlerEvents.onlyAdminBot2ToUseOnReply=👑 Dev reply only
-handlerEvents.onlyAdminBot2ToUseOnReaction=👑 Dev reaction only
-
-handlerEvents.waitingForCommand=⏳ Cooldown: wait %1s
-
-handlerEvents.errorOccurred=🚨 [%1] Error in %2:\n%3
-handlerEvents.errorOccurred2=🚨 Command error in %2
-handlerEvents.errorOccurred3=🚨 Reply error in %2
-handlerEvents.errorOccurred4=🚨 Reaction error in %2
-handlerEvents.errorOccurred5=🚨 Event error in %2
-handlerEvents.errorOccurred6=🚨 Event crash in %2
-handlerEvents.errorOccurred7=🚨 AnyEvent crash in %2
-
-handlerEvents.cannotFindCommandName=❓ Command name missing
-handlerEvents.cannotFindCommand=❓ Command not found: %1
-
-# bot/autoUptime.js
-autoUptime.autoUptimeTurnedOn=🌐 Auto uptime enabled
-
-# database/controller/index.js
-indexController.connectingMongoDB=🌐 Connecting MongoDB...
+// =======================
+// DATABASE/CONTROLLER/INDEX.JS
+// =======================
+indexController.connectingMongoDB=🔌 Connecting MongoDB...
 indexController.connectMongoDBSuccess=✅ MongoDB connected
-indexController.connectMongoDBError=❌ MongoDB connection failed
+indexController.connectMongoDBError=❌ MongoDB connection failed: %1
+indexController.connectingMySQL=🔌 Connecting SQLITE...
+indexController.connectMySQLSuccess=✅ SQLITE connected
+indexController.connectMySQLError=❌ SQLITE connection failed: %1
 
-indexController.connectingMySQL=📦 Connecting SQLite...
-indexController.connectMySQLSuccess=✅ SQLite connected
-indexController.connectMySQLError=❌ SQLite connection failed
+// =======================
+// UPDATER.JS
+// =======================
+updater.updateTooFast=⏳ Wait 5 min after last commit — %1m %2s left
+updater.latestVersion=✅ Using latest version
+updater.cantFindVersion=❌ Version undefined (%1)
+updater.newVersions=⬆️ %1 new versions — updating...
+updater.updateSuccess=✅ Update successful %1
+updater.configChanged=⚠️ %1 changed — check config.json
+updater.installingPackages=📦 Installing dependencies...
+updater.installSuccess=✅ Dependencies installed — restart bot
+updater.backupSuccess=💾 Backup saved: %1
+updater.restartToApply=🔄 Restart bot to apply
+updater.skipFile=⚠️ Skipped %1 due to comment %2
 
-# updater.js
-updater.updateTooFast=⏳ Wait %1m %2s before updating again
-updater.latestVersion=✅ Already up to date
-updater.cantFindVersion=⚠️ Version undefined: %1
+// =======================
+// DASHBOARD/ROUTES/VERIFYFBID.JS
+// =======================
+verifyfbid.sendCode=🔢 Your verification code:\n%1\nValid for %2 minutes
 
-updater.newVersions=⬆️ %1 updates available
-updater.updateSuccess=🎉 Update completed
-updater.configChanged=⚠️ Config changed — review required
+// =======================
+// UTILS.JS
+// =======================
+utils.errorOccurred=❌ Error:\n%1
 
-updater.installingPackages=📦 Installing packages...
-updater.installSuccess=✅ Packages installed — restart bot
-updater.backupSuccess=💾 Backup created in %1
-updater.restartToApply=🔁 Restart bot to apply changes
+// =======================
+// COMMAND.JS
+// =======================
+command.restartedBot=♻️ Bot restarted
 
-updater.skipFile=⏭️ Skipped file %1 (%2)
-
-# dashboard
-verifyfbid.sendCode=🔐 Verification code:\n%1\nValid for %2 minutes
-
+// =======================
+// DASHBOARD/APP.JS
+// =======================
+app.googleApiRefreshTokenExpired=🔐 Google API token expired — renew: https://developers.google.com/oauthplayground/
 app.tooManyRequests=⚠️ Too many requests — try later
-app.notPermissionChangeFbstate=🚫 No permission to change fbstate
-app.notFoundFbstate=❗ fbstate missing
-app.changedFbstateSuccess=✅ fbstate updated
-app.serverError=❌ Server error — try again
+app.notPermissionChangeFbstate=❌ No permission to change fbstate
+app.notFoundFbstate=❌ Enter fbstate
+app.changedFbstateSuccess=✅ fbstate changed
+app.serverError=❌ Server error — try later
