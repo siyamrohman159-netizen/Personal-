@@ -4,14 +4,14 @@ module.exports = {
   config: {
     name: "font",
     aliases: ["fonts", "style"],
-    version: "1.0",
+    version: "1.2",
     author: "Siyuuu",
     countDown: 5,
     role: 0,
-    category: "tools",
+    category: "style",
     shortDescription: "Convert text to fancy fonts via API",
     longDescription: "Use /font <id> <text> or /font list",
-    guide: "{pn} list | {pn} 16 Saim"
+    guide: "{pn} list | {pn} 16 Siyuuu"
   },
 
   onStart: async function ({ message, event, api, threadPrefix }) {
@@ -31,44 +31,47 @@ module.exports = {
       if (args[0].toLowerCase() === "list") {
         const preview = `✨ 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐅𝐨𝐧𝐭 𝐒𝐭𝐲𝐥𝐞𝐬 ✨
 ━━━━━━━━━━━━━━━━━━━━☆
-1 ⟶ Ĕ̈w̆̈’r̆̈ S̆̈ă̈ĭ̈m̆̈
-2 ⟶ E̷w̷'̷r̷ S̷a̷i̷m̷
-3 ⟶ 𝗘𝘄'𝗿 𝗦𝗮𝗶𝗺
-4 ⟶ 𝘌𝘸'𝘳 𝘚𝘢𝘪𝘮
-5 ⟶ [E][w]'[r] [S][a][i][m]
-6 ⟶ 𝕰𝖜'𝖗 𝕾𝖆𝖎𝖒
-7 ⟶ Ｅｗ'ｒ Ｓａｉｍ
-8 ⟶ ᴱʷ'ʳ ˢᵃⁱᵐ
-9 ⟶ ǝʍ'ɹ sɒᴉɯ
-10 ⟶ 🄴🅆'🅁 🅂🄰🄸🄼
-11 ⟶ 🅴🆆'🆁 🆂🅰🅸🅼
-12 ⟶ 𝐸𝓌'𝓇 𝒮𝒶𝒾𝓂
-13 ⟶ Ⓔⓦ'ⓡ Ⓢⓐⓘⓜ
-14 ⟶ 🅔🅦'🅡 🅢🅐🅘🅜
-15 ⟶ 𝙀𝙬'𝙧 𝙎𝙖𝙞𝙢
-16 ⟶ 𝐄𝐰'𝐫 𝐒𝐚𝐢𝐦
-17 ⟶ 𝔈𝔴'𝔯 𝔖𝔞𝔦𝔪
-18 ⟶ 𝓔𝔀'𝓻 𝓢𝓪𝓲𝓶
-19 ⟶ 𝙴𝚠'𝚛 𝚂𝚊𝚒𝚖
-20 ⟶ ᴇᴡ'ʀ ꜱᴀɪᴍ
-21 ⟶ 𝐸𝑤'𝑟 𝑆𝑎𝑖𝑚
-22 ⟶ 𝑬𝒘'𝒓 𝑺𝒂𝒊𝒎
-23 ⟶ 𝔼𝕨'𝕣 𝕊𝕒𝕚𝕞
-24 ⟶ ꫀ᭙'᥅ ᦓꪖ꠸ꪑ
-25 ⟶ єω'я ѕαιм
-26 ⟶ ᏋᏇ'Ꮢ ᏕᏗᎥᎷ
-27 ⟶ 乇山'尺 丂卂丨爪
-28 ⟶ ᘿᘺ'ᖇ Sᗩᓰᘻ
-29 ⟶ ɛա'ʀ ֆǟɨʍ
-30 ⟶ 𐌄Ꮤ'𐌓 𐌔𐌀𐌉𐌌
-31 ⟶ ΣЩ’Я ƧΛIM
+1 ⟶ 𝐒𝐢𝐲𝐮𝐮
+2 ⟶ 𝑺𝒊𝒚𝒖𝒖
+3 ⟶ 𝗦𝗶𝘆𝘂𝘂
+4 ⟶ 𝘚𝘪𝘺𝘂𝘂
+5 ⟶ [S][i][y][u][u]
+6 ⟶ 𝕾𝖎𝖞𝖚𝖚
+7 ⟶ Ｓｉｙｕｕ
+8 ⟶ ᴿˢⁱʸᵘᵘ
+9 ⟶ sɪʏᴜᴜ
+10 ⟶ 🅂🄸🅈🅄🅄
+11 ⟶ 🆂🅸🆈🆄🆄
+12 ⟶ 𝒮𝒾𝓎𝓊𝓊
+13 ⟶ ⓈⓘⓎⓤⓤ
+14 ⟶ 🅂🅸🅈🅄🅄
+15 ⟶ 𝙎𝙞𝙮𝙪𝙪
+16 ⟶ 𝐒𝐢𝐲𝐮𝐮
+17 ⟶ 𝔖𝔦𝔂𝔲𝔲
+18 ⟶ 𝓢𝓲𝔂𝓾𝓾
+19 ⟶ 𝙎𝙞𝙮𝙪𝙪
+20 ⟶ ᴿˢⁱʸᵘᵘ
+21 ⟶ 𝐒𝑖𝑦𝑢𝑢
+22 ⟶ 𝑺𝒊𝒚𝒖𝒖
+23 ⟶ 𝔖𝕚𝕪𝕦𝕦
+24 ⟶ 𝕾𝓲𝔂𝓾𝓾
+25 ⟶ 𝕾𝓲𝔂𝓾𝓾
+26 ⟶ 𝕾𝓲𝔂𝓾𝓾
+27 ⟶ 𝕾𝓲𝔂𝓾𝓾
+28 ⟶ 𝕾𝓲𝔂𝓾𝓾
+29 ⟶ 𝕾𝓲𝔂𝓾𝓾
+30 ⟶ 𝕾𝓲𝔂𝓾𝓾
+31 ⟶ 𝕾𝓲𝔂𝓾𝓾
 ━━━━━━━━━━━━━━━━━━━━━☆`;
         return api.sendMessage(preview, event.threadID, event.messageID);
       }
 
       const id = args[0];
-      const text = args.slice(1).join(" ");
-      if (!text) return api.sendMessage(`❌ Invalid usage! Provide text to convert.`, event.threadID, event.messageID);
+      // If no text given, default to "Siyuuu"
+      let text = args.slice(1).join(" ") || "Siyuuu";
+
+      // Always replace any EWR/Saim remnants with "Siyuuu"
+      text = text.replace(/Ew'?r Saim/gi, "Siyuuu");
 
       const apiUrl = `https://xsaim8x-xxx-api.onrender.com/api/font?id=${id}&text=${encodeURIComponent(text)}`;
       const response = await axios.get(apiUrl);
