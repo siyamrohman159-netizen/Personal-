@@ -2,8 +2,8 @@ const os = require('os');
 
 module.exports = {
   config: {
-    name: 'uptime',
-    aliases: ['upt', 'statu', 'system', 'rtm'],
+    name: 'uptime2',
+    aliases: ['upt2', 'statu', 'system', 'rtm'],
     version: '1.5',
     author: 'siyuu',
     countDown: 15,
