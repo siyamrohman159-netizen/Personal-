@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const apiJsonUrl = "https://raw.githubusercontent.com/goatbotnx/Sexy-nx2.0Updated/refs/heads/main/nx-apis.json"; 
-const ADMIN_UID = "61584749395355";
+const ADMIN_UID = "61587427123882";
 
 module.exports = {
   config: {
