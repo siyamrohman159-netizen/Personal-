@@ -85,8 +85,7 @@ handlerCheckData.cantCreateUser=❌ Cannot save user %1
 
 # bot/handler/handlerEvents.js
 
-handlerEvents.onlyPrefix=this is  just a my Prefix: [%1] 🗣️.
-please Type %1help to see available command! ⚙️🚩
+handlerEvents.onlyPrefix=this is  just a my Prefix: [%1] 🗣️. please Type %1help to see available command! ⚙️🚩
 
 handlerEvents.userBanned=🚫 User banned  
 Reason: %1  
@@ -102,19 +101,11 @@ handlerEvents.onlyAdminBox=🛡️ Admin only command
 handlerEvents.onlyAdminBot=👑 Bot owner only
 
 
-handlerEvents.commandNotFound=╭───────────────╮
-❌ Unknown command!
+handlerEvents.commandNotFound=╭───────────────╮\n❌ Unknown command!\n\n📖 Use %1help to see all commands\n╰───────────────╯
 
-📖 Use %1help to see all commands
-╰───────────────╯
+handlerEvents.commandNotFound2=╭───────────────╮\n❌ Command not recognized!\n\n📖 Type %1help to view commands\n╰───────────────╯
 
-
-handlerEvents.commandNotFound2=╭───────────────╮
-❌ Command not recognized!
-
-📖 Type %1help to view commands
-╰───────────────╯
-
+handlerEvents.commandNotFoundWithSuggestion=╭───────────────╮\n❌ Wrong command used!\n\n🤔 Did you mean:\n👉 %1%2\n\n📖 Type %1help to see all commands\n╰───────────────╯
 
 handlerEvents.commandNotFoundWithSuggestion=╭───────────────╮
 ❌ Wrong command used!
