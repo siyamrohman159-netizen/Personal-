@@ -1,7 +1,9 @@
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
 module.exports = {
   config: {
     name: "kick",
-    version: "1.4",
+    version: "1.5",
     author: "siyuuu",
     countDown: 5,
     role: 1,
@@ -11,8 +13,8 @@ module.exports = {
     },
     category: "box chat",
     guide: {
-      vi: "   {pn} @tags: dùng để kick những người được tag",
-      en: "   {pn} @tags: use to kick members who are tagged"
+      vi: "{pn} @tags: dùng để kick những người được tag hoặc react 🦵 để kick",
+      en: "{pn} @tags: use to kick members who are tagged or react 🦵 to kick"
     }
   },
 
@@ -29,9 +31,6 @@ module.exports = {
     const adminIDs = await threadsData.get(event.threadID, "adminIDs");
     if (!adminIDs.includes(api.getCurrentUserID()))
       return message.reply(getLang("needAdmin"));
-
-    // delay helper
-    const delay = ms => new Promise(res => setTimeout(res, ms));
 
     async function kickWithBye(uid) {
       try {
@@ -53,7 +52,7 @@ module.exports = {
       }
     }
 
-    // reply kick
+    // Command based kick
     if (!args[0]) {
       if (!event.messageReply)
         return message.SyntaxError();
@@ -68,6 +67,49 @@ module.exports = {
       for (const uid of uids) {
         if (await kickWithBye(uid) === "ERROR") return;
       }
+    }
+  },
+
+  // New reaction handler
+  onReaction: async function ({ event, api, threadsData, usersData, getLang }) {
+    try {
+      // Only trigger on 🦵 emoji
+      if (event.reaction !== "🦵") return;
+
+      const adminIDs = await threadsData.get(event.threadID, "adminIDs");
+      if (!adminIDs.includes(api.getCurrentUserID())) return;
+
+      const uid = event.userID; // user who reacted
+      const messageID = event.messageID;
+
+      // fetch sender of the reacted message
+      const threadInfo = await api.getThreadInfo(event.threadID);
+      const messageInfo = threadInfo?.messages?.find(msg => msg.messageID === messageID);
+      if (!messageInfo) return;
+
+      const targetID = messageInfo.senderID;
+
+      // kick using same function
+      const delay = ms => new Promise(res => setTimeout(res, ms));
+      async function kickWithBye(uid) {
+        try {
+          const user = await usersData.get(uid);
+          const name = user?.name || "User";
+
+          await api.sendMessage(`👋 Ok bye ${name}`, event.threadID);
+          await delay(1000);
+          await api.removeUserFromGroup(uid, event.threadID);
+        }
+        catch (e) {
+          api.sendMessage(getLang("needAdmin"), event.threadID);
+          return "ERROR";
+        }
+      }
+
+      await kickWithBye(targetID);
+    }
+    catch (e) {
+      console.error(e);
     }
   }
 };
