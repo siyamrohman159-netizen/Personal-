@@ -106,7 +106,7 @@ handlerEvents.onlyAdminBot=❌ Bot admins only
 handlerEvents.onlyDeveloperGlobal=⚙️ Bot developer only
 handlerEvents.onlyVipUserGlobal=💎 VIP users only
 handlerEvents.commandNotFound=❌ Command "%1" not found — type %2help
-handlerEvents.commandNotFoundWithSuggestion=🧐 Command "%1" not found.\nDid you mean %2%1?
+handlerEvents.commandNotFoundWithSuggestion=😅Command "%1" not found
 handlerEvents.commandSyntaxError=⚠️ Wrong syntax — type %1help %2
 handlerEvents.onlyAdmin=❌ Admins only for "%1"
 handlerEvents.onlyAdminToUseOnReply=❌ Admins only to reply "%1"
@@ -116,7 +116,7 @@ handlerEvents.onlyVipUser=💎 VIP only for "%1"
 handlerEvents.waitingForCommand=⏱ Wait %1s before using this command
 handlerEvents.errorOccurred=❌ Error [%1] at "%2"\n%3
 handlerEvents.cannotFindCommand=❌ Cannot find "%1" to execute
-handlerEvents.onlyPrefix=🗣️ This is just your Prefix: [%1]. Please type %1help to see available commands! ⚙️🚩
+handlerEvents.onlyPrefix=🗣️ This is just my Prefix: [%1]. Please type %1help to see available commands! ⚙️🚩
 
 // =======================
 // BOT/AUTOUTIME.JS
