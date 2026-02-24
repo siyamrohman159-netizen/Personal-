@@ -87,15 +87,15 @@
 
 ## 📬 Contact Me
 
-<a href="https://m.me/j/AbZVIj-UFgtt3Rcb/" target="_blank">
+<a href="https://m.me/siyuuuuuuuuuuuuuuu" target="_blank">
   <img src="https://img.shields.io/badge/Messenger-0084FF?style=for-the-badge&logo=messenger&logoColor=white" />
 </a>
 
-<a href="https://www.facebook.com/share/16x8YsSXyX/" target="_blank">
+<a href="https://www.facebook.com/siyuuuuuuuuuuu" target="_blank">
   <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
 </a>
 
-<a href="https://www.instagram.com/siyuu_0.01?igsh=Mzg0MzMwYm40dWhw" target="_blank">
+<a href="https://www.instagram.com/phantom_99xs?igsh=MzNlNGNkZWQ4Mg==" target="_blank">
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
 </a>
 
