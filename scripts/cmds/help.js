@@ -5,8 +5,8 @@ module.exports = {
   config: {
     name: "help",
     aliases: ["h"],
-    version: "4.1",
-    author: "T A N J I L 🎀 (fixed by Siyuu)",
+    version: "5.0",
+    author: "Siyuu 🎀",
     role: 0,
     shortDescription: "Show help menu",
     longDescription: "Show all commands or command detail",
@@ -14,10 +14,10 @@ module.exports = {
     guide: "{pn} | {pn} <command>"
   },
 
-  onStart: async function ({ message, event, args }) {
+  onStart: async function({ message, event, args }) {
     const prefix = await getPrefix(event.threadID);
 
-    /* ================= COMMAND DETAIL ================= */
+    // ===== COMMAND DETAIL =====
     if (args[0]) {
       const cmdName = args[0].toLowerCase();
       const cmd =
@@ -26,20 +26,9 @@ module.exports = {
           c.config.aliases?.includes(cmdName)
         );
 
-      if (!cmd) {
-        return message.reply(`❌ Command "${cmdName}" not found.`);
-      }
+      if (!cmd) return message.reply(`❌ Command "${cmdName}" not found.`);
 
-      const {
-        name,
-        category,
-        version,
-        author,
-        countDown,
-        shortDescription,
-        longDescription,
-        guide
-      } = cmd.config;
+      const { name, category, version, author, countDown, shortDescription, longDescription, guide } = cmd.config;
 
       const desc =
         typeof longDescription === "string"
@@ -48,75 +37,60 @@ module.exports = {
 
       const usage =
         typeof guide === "string"
-          ? guide
-          : guide?.en
-              ?.replace(/{pn}/g, `${prefix}${name}`) ||
-            `${prefix}${name}`;
+          ? guide.replace(/{pn}/g, `${prefix}${name}`)
+          : guide?.en?.replace(/{pn}/g, `${prefix}${name}`) || `${prefix}${name}`;
 
       const box = 
-`╭──❏ 𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗗𝗘𝗧𝗔𝗜𝗟 ❏──╮
-│ ✧ Name: ${name}
-│ ✧ Category: ${category || "Uncategorized"}
-│ ✧ Version: ${version || "1.0"}
-│ ✧ Author: ${author || "Unknown"}
-│ ✧ Cooldowns: ${countDown || 0}s
-╰─────────────────────⭓
+`✦『 🌸 ${name.toUpperCase()} 🌸 』✦
+✦ Category: ${category || "Uncategorized"} ✦
+✦ Version: ${version || "1.0"} ✦
+✦ Author: ${author || "Unknown"} ✦
+✦ Cooldown: ${countDown || 0}s ✦
+
 📘 Description: ${desc}
 📗 Usage: ${usage}`;
 
       return message.reply(box);
     }
 
-    /* ================= FULL HELP MENU ================= */
-    const botName = "Maiko";
-    const creator = "Siyuu";
+    // ===== FULL HELP MENU =====
+    const botName = "MAIKO";
+    const creator = "SIYUU";
 
-    const videos = [
-      "https://files.catbox.moe/pck0sn.mp4",
-      "https://files.catbox.moe/3s3pkw.mp4",
-      "https://files.catbox.moe/81lsp7.mp4",
-      "https://files.catbox.moe/c21xsl.mp4"
-    ];
-    const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-
+    // Collect commands by category
     const categories = {};
     for (const cmd of commands.values()) {
-      if (cmd.config.role > 1) continue;
+      if (cmd.config.role > 1) continue; // skip admin/mod only
       const cate = cmd.config.category || "OTHER";
       if (!categories[cate]) categories[cate] = [];
       categories[cate].push(cmd.config.name);
     }
 
-    let text =
-`╭──────୨ৎ──────╮
-    ${botName} HELP MENU
-╰──────୨ৎ──────╯`;
+    // Build menu text
+    let text = 
+`✦『 maiko goatbot 』✦
+✦ AI ✦
+✦ HELP MENU ✦
+`;
 
     for (const cate of Object.keys(categories).sort()) {
-      text += `\n┍─━〔 ${cate.toUpperCase()} 〕\n`;
+      text += `\n〔 ${cate.toUpperCase()} 〕\n`;
       for (const name of categories[cate].sort()) {
-        text += `╎ᯓ✧. ${name}\n`;
+        text += `⌬ ${name.toUpperCase()}  `;
       }
-      text += `┕━─────୨ৎ─────━ᥫ᭡`;
+      text += `\n`;
     }
 
     text += `
-• Need help with a command?  
-Use ${prefix}help <command>
+✦ TOTAL: ${commands.size}
+✦ PREFIX: ${prefix || "/"}
+✦ OWNER: ${creator}
+`;
 
-╭──────୨ৎ──────╮
-╎ 🔢 Total Commands: ${commands.size}
-╎ ⚡ Prefix: ${prefix || "NoPrefix"}
-╎ 👤 Creator: ${creator}
-╰──────୨ৎ──────╯`;
-
-    return message.reply({
-      body: text,
-      attachment: await global.utils.getStreamFromURL(randomVideo)
-    });
+    return message.reply(text);
   },
 
-  onChat: async function ({ event, message }) {
+  onChat: async function({ event, message }) {
     if (event.body?.toLowerCase().trim() === "help") {
       return this.onStart({ message, event, args: [] });
     }
