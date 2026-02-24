@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const path = require('path');
 const { createCanvas, loadImage } = require('canvas');
 
-const API_ENDPOINT = "https://metakexbyneokex.fly.dev/images/generate";
+const API_ENDPOINT = "https://metabyneokex.vercel.app/photos/generate";
 
 async function downloadImage(url, tempDir, filename) {
     const tempFilePath = path.join(tempDir, filename);
@@ -24,7 +24,6 @@ async function downloadImage(url, tempDir, filename) {
 
 async function createGridImage(imagePaths, outputPath) {
     const images = await Promise.all(imagePaths.map(p => loadImage(p)));
-
     const imgWidth = images[0].width;
     const imgHeight = images[0].height;
     const padding = 10;
@@ -49,12 +48,10 @@ async function createGridImage(imagePaths, outputPath) {
     for (let i = 0; i < images.length && i < 4; i++) {
         const { x, y } = positions[i];
         ctx.drawImage(images[i], x, y, imgWidth, imgHeight);
-
         ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
         ctx.beginPath();
         ctx.arc(x + numberSize, y + numberSize, numberSize - 5, 0, Math.PI * 2);
         ctx.fill();
-
         ctx.fillStyle = '#ffffff';
         ctx.font = 'bold 28px Arial';
         ctx.textAlign = 'center';
@@ -71,71 +68,61 @@ module.exports = {
     config: {
         name: "meta",
         aliases: ["metaai", "metagen"],
-        version: "1.0",
-        author: "siyuu",
+        version: "2.3",
+        author: "Neoaz ゐ",//credit churi korle tor mare cdi
         countDown: 20,
         role: 0,
-        longDescription: "Generate images using Meta.AI. Returns a grid of 4 images, reply with 1-4 to select one.",
+        longDescription: "Generate 4 images using Meta AI with persistence on selection.",
         category: "ai-image",
         guide: {
-            en: "{pn} <prompt>\n\nExample: {pn} a cute cat playing with yarn\n\nAfter receiving the grid, reply with 1, 2, 3, or 4 to select your preferred image."
+            en: "{pn} <prompt> --ar <ratio>\nExample: {pn} a cybernetic forest --ar 16:9"
         }
     },
 
     onStart: async function({ message, args, event, commandName }) {
-        const prompt = args.join(" ");
+        let fullPrompt = args.join(" ");
+        if (!fullPrompt) return message.reply("Please provide a prompt.");
+
+        let orientation = "SQUARE";
+        if (fullPrompt.includes("--ar 16:9")) {
+            orientation = "LANDSCAPE";
+            fullPrompt = fullPrompt.replace("--ar 16:9", "");
+        } else if (fullPrompt.includes("--ar 9:16")) {
+            orientation = "VERTICAL";
+            fullPrompt = fullPrompt.replace("--ar 9:16", "");
+        } else if (fullPrompt.includes("--ar 1:1")) {
+            orientation = "SQUARE";
+            fullPrompt = fullPrompt.replace("--ar 1:1", "");
+        }
+
+        const prompt = fullPrompt.trim();
         const cacheDir = path.join(__dirname, 'cache');
-
-        if (!fs.existsSync(cacheDir)) {
-            await fs.mkdirp(cacheDir);
-        }
-
-        if (!prompt) {
-            return message.reply("❌ Please provide a prompt to generate images.\n\nExample: meta a beautiful sunset over mountains");
-        }
+        if (!fs.existsSync(cacheDir)) await fs.mkdirp(cacheDir);
 
         message.reaction("⏳", event.messageID);
 
-        const tempPaths = [];
-        let gridPath = '';
-
         try {
-            const response = await axios.post(API_ENDPOINT, {
-                prompt: prompt.trim()
-            }, {
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                timeout: 150000
+            const response = await axios.get(API_ENDPOINT, {
+                params: { prompt, orientation },
+                timeout: 180000
             });
 
             const data = response.data;
+            if (!data.success || !data.image_urls) throw new Error("Generation failed.");
 
-            if (!data.success || !data.images || data.images.length === 0) {
-                const errorMsg = data.message || "API did not return any images.";
-                throw new Error(errorMsg);
-            }
-
-            const imageUrls = data.images.slice(0, 4).map(img => img.url);
-
-            if (imageUrls.length < 4) {
-                throw new Error(`Expected 4 images but received ${imageUrls.length}.`);
-            }
+            const imageUrls = data.image_urls.slice(0, 4);
+            const tempPaths = [];
 
             for (let i = 0; i < imageUrls.length; i++) {
-                const imgPath = await downloadImage(
-                    imageUrls[i],
-                    cacheDir,
-                    `meta_${Date.now()}_${i + 1}.png`
-                );
+                const imgPath = await downloadImage(imageUrls[i], cacheDir, `meta_${Date.now()}_${i + 1}.png`);
                 tempPaths.push(imgPath);
             }
 
-            gridPath = path.join(cacheDir, `meta_grid_${Date.now()}.png`);
+            const gridPath = path.join(cacheDir, `meta_grid_${Date.now()}.png`);
             await createGridImage(tempPaths, gridPath);
 
             message.reply({
-                body: `✨ Meta AI generated 4 images\n\n📷 Reply with 1, 2, 3, or 4 to select your preferred image.`,
+                body: `✨ Prompt: ${prompt}\n📐 Ratio: ${orientation}\n\n📷 Reply with 1-4 to select, or "all" to get all.`,
                 attachment: fs.createReadStream(gridPath)
             }, (err, info) => {
                 if (!err) {
@@ -143,108 +130,55 @@ module.exports = {
                         commandName,
                         messageID: info.messageID,
                         author: event.senderID,
-                        imageUrls: imageUrls,
-                        tempPaths: tempPaths,
-                        gridPath: gridPath,
-                        prompt: prompt
+                        imageUrls,
+                        tempPaths,
+                        gridPath
                     });
-                } else {
-                    for (const p of tempPaths) {
-                        if (fs.existsSync(p)) fs.unlinkSync(p);
-                    }
-                    if (gridPath && fs.existsSync(gridPath)) fs.unlinkSync(gridPath);
                 }
             });
 
             message.reaction("✅", event.messageID);
-
         } catch (error) {
             message.reaction("❌", event.messageID);
-
-            for (const p of tempPaths) {
-                if (fs.existsSync(p)) fs.unlinkSync(p);
-            }
-            if (gridPath && fs.existsSync(gridPath)) fs.unlinkSync(gridPath);
-
-            let errorMessage = "An error occurred during image generation.";
-            if (error.response) {
-                if (error.response.status === 422) {
-                    errorMessage = "Invalid prompt format. Please try a different prompt.";
-                } else if (error.response.status === 503) {
-                    errorMessage = "Service temporarily unavailable. Please try again later.";
-                } else if (error.response.status === 500) {
-                    errorMessage = error.response.data?.detail || "Server error occurred.";
-                } else {
-                    errorMessage = `HTTP Error: ${error.response.status}`;
-                }
-            } else if (error.code === 'ETIMEDOUT' || error.code === 'ECONNABORTED') {
-                errorMessage = "Request timed out. The image generation is taking too long, please try again.";
-            } else if (error.message) {
-                errorMessage = error.message;
-            }
-
-            console.error("Meta Command Error:", error);
-            message.reply(`❌ ${errorMessage}`);
+            message.reply("Error: " + error.message);
         }
     },
 
     onReply: async function({ message, event, Reply }) {
-        const { imageUrls, tempPaths, gridPath, prompt, author } = Reply;
+        if (event.senderID !== Reply.author) return;
 
-        if (event.senderID !== author) {
-            return;
-        }
-
-        const userReply = event.body.trim();
-        const selection = parseInt(userReply);
-
-        if (isNaN(selection) || selection < 1 || selection > 4) {
-            return;
-        }
-
+        const userReply = event.body.trim().toLowerCase();
         const cacheDir = path.join(__dirname, 'cache');
-        let selectedImagePath = '';
+        const selectedPaths = [];
 
         try {
             message.reaction("⏳", event.messageID);
 
-            const selectedUrl = imageUrls[selection - 1];
-
-            if (!selectedUrl) {
-                return message.reply("❌ Invalid selection. Please reply with 1, 2, 3, or 4.");
+            if (userReply === 'all') {
+                for (let i = 0; i < Reply.imageUrls.length; i++) {
+                    const imgPath = await downloadImage(Reply.imageUrls[i], cacheDir, `meta_all_${Date.now()}_${i}.png`);
+                    selectedPaths.push(imgPath);
+                }
+                await message.reply({ body: "All images:", attachment: selectedPaths.map(p => fs.createReadStream(p)) });
+            } else {
+                const i = parseInt(userReply) - 1;
+                if (i >= 0 && i < Reply.imageUrls.length) {
+                    const imgPath = await downloadImage(Reply.imageUrls[i], cacheDir, `meta_one_${Date.now()}.png`);
+                    selectedPaths.push(imgPath);
+                    await message.reply({ body: `Image ${i + 1}:`, attachment: fs.createReadStream(imgPath) });
+                } else {
+                    return message.reaction("❓", event.messageID);
+                }
             }
-
-            selectedImagePath = path.join(cacheDir, `meta_selected_${Date.now()}.png`);
-            await downloadImage(selectedUrl, cacheDir, path.basename(selectedImagePath));
-
-            await message.reply({
-                body: `✨ Here is your image`,
-                attachment: fs.createReadStream(selectedImagePath)
-            });
-
             message.reaction("✅", event.messageID);
-
-        } catch (error) {
-            message.reaction("❌", event.messageID);
-            console.error("Meta Selection Error:", error);
-            message.reply(`❌ Failed to retrieve selected image: ${error.message}`);
+        } catch (e) {
+            message.reply("Error: " + e.message);
         } finally {
-            const cleanup = async () => {
-                if (selectedImagePath && fs.existsSync(selectedImagePath)) {
-                    await fs.unlink(selectedImagePath).catch(console.error);
+            setTimeout(async () => {
+                for (const p of selectedPaths) {
+                    if (fs.existsSync(p)) await fs.unlink(p);
                 }
-                if (tempPaths) {
-                    await Promise.all(tempPaths.map(p =>
-                        fs.existsSync(p) ? fs.unlink(p).catch(console.error) : Promise.resolve()
-                    ));
-                }
-                if (gridPath && fs.existsSync(gridPath)) {
-                    await fs.unlink(gridPath).catch(console.error);
-                }
-            };
-            cleanup().catch(console.error);
-
-            global.GoatBot.onReply.delete(Reply.messageID);
+            }, 5000);
         }
     }
 };
