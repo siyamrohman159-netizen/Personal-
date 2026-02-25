@@ -17,12 +17,12 @@
                 "child_process": "^1.0.2",
                 "connect-flash": "^0.1.1",
                 "cookie-parser": "^1.4.6",
+                "crypto": "^1.0.1",
                 "eta": "^1.12.3",
                 "express": "^4.18.1",
                 "express-fileupload": "^1.4.0",
                 "express-rate-limit": "^6.5.2",
                 "express-session": "^1.17.3",
-                "fca-neokex": "^1.0.1",
                 "form-data": "^4.0.0",
                 "fs": "^0.0.1-security",
                 "fs-extra": "^11.1.0",
@@ -34,6 +34,7 @@
                 "moment-timezone": "^0.5.34",
                 "mongoose": "^9.0.0",
                 "mqtt": "^4.3.7",
+                "neokex-fca": "^4.5.5",
                 "node-cron": "^3.0.2",
                 "npmlog": "^7.0.1",
                 "ora": "^5.4.1",
@@ -54,9 +55,9 @@
                 "yt-search": "^2.13.1"
         },
         "scripts": {
-                "start": "set NODE_ENV=&& node index.js",
-                "dev": "set NODE_ENV=development&& node index.js",
-                "prod": "set NODE_ENV=production&& node index.js"
+                "start": "node index.js",
+                "dev": "NODE_ENV=development node index.js",
+                "prod": "NODE_ENV=production node index.js"
         },
         "author": "NTKhang",
         "license": "MIT",
