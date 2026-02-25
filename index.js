@@ -1,72 +1,84 @@
 /**
- * @author NTKhang
- * ! The source code is written by NTKhang, please don't change the author's name everywhere.
- * ! Official source code: https://github.com/ntkhang03/Goat-Bot-V2
- * ! If you do not download the source code from the above address, you are using an unknown version and at risk of having your account hacked
+ * @author NTKhang & Optimized by siyuuuuu 👽→ Ultra-fast smooth version
+ * ! Original: https://github.com/ntkhang03/Goat-Bot-V2
  */
 
 const { spawn } = require("child_process");
-const log = require("./logger/log.js");
 const express = require("express");
+const os = require("os");
+const log = require("./logger/log.js");
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// 🌐 Render web server (always alive)
-app.get("/", (req, res) => {
-  res.send("🚀 Siyuu's Goat Bot is ONLINE and ready!");
+// ────────────────────────────────────────────────
+// Fast & lightweight health endpoint
+app.get(["/", "/health", "/status"], (req, res) => {
+  res.json({
+    status: "online ✅",
+    uptimeSec: process.uptime().toFixed(0),
+    memoryMB: (process.memoryUsage().rss >> 20).toFixed(1),
+    cpuLoad: os.loadavg()[0].toFixed(2),
+    restarts: restartCount,
+    ts: Date.now()
+  });
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("🌟 Web service running on port:", process.env.PORT || 3000);
-});
+app.listen(PORT, () => log.info(`🌐 Status server → http://localhost:${PORT}`));
 
-// ⚡ Goat Bot auto-restart controller
-let crashCount = 0;
-const maxCrashes = 5;
-const restartDelay = 2000; // 2 seconds delay for super-fast restart
+// ────────────────────────────────────────────────
+// Bot Restart Logic
+let restartCount = 0;
+const MAX_RESTARTS = 15;
+const RESTART_DELAY = 1500; // 1.5s fast but safe
+const MEMORY_LIMIT_MB = 500; // higher tolerance for smooth run
+const MEMORY_CHECK_INTERVAL = 20000; // 20s
 
-function startProject() {
+function startBot() {
   const child = spawn("node", ["Goat.js"], {
     cwd: __dirname,
     stdio: "inherit",
-    shell: true
+    shell: true,
+    env: { ...process.env, NODE_NO_WARNINGS: "1" }
   });
 
-  log.info("🔥 Goat.js launched! Let’s goooo!");
+  log.info(`🚀 GoatBot starting... attempt #${restartCount + 1}`);
 
   child.on("close", (code) => {
-    crashCount++;
-    if (crashCount > maxCrashes) {
-      log.error(`💥 Goat.js crashed ${crashCount} times. Manual check needed!`);
-      return;
+    if (code === 0) return log.info("Bot exited normally ✅");
+
+    restartCount++;
+    if (restartCount >= MAX_RESTARTS) {
+      log.error(`❌ Too many restarts (${restartCount})`);
+      process.exit(1);
     }
-    log.warn(`⚠️ Goat.js exited with code ${code}. Restarting in ${restartDelay / 1000}s... (${crashCount}/${maxCrashes})`);
-    setTimeout(() => startProject(), restartDelay);
+
+    log.warn(`⚡ Restarting in ${RESTART_DELAY / 1000}s → [${restartCount}/${MAX_RESTARTS}] (code: ${code})`);
+    setTimeout(startBot, RESTART_DELAY);
   });
 
-  child.on("error", (err) => {
-    log.error("❌ Failed to start Goat.js:", err);
-  });
+  child.on("error", (err) => log.error("Spawn error:", err.message));
 }
 
-// 🧠 Memory monitor (auto-restart if too high)
+// ────────────────────────────────────────────────
+// Ultra-light memory guard
 setInterval(() => {
-  const used = process.memoryUsage().rss / 1024 / 1024; // MB
-  if (used > 300) {
-    log.warn(`💾 Memory high: ${used.toFixed(2)}MB — restarting for safety...`);
+  const usedMB = process.memoryUsage().rss >> 20;
+  if (usedMB > MEMORY_LIMIT_MB) {
+    log.warn(`💥 Memory limit exceeded: ${usedMB}MB → restarting`);
     process.exit(1);
   }
-}, 60000); // check every 60s
+}, MEMORY_CHECK_INTERVAL);
 
-// 🛑 Graceful shutdown signals
-process.on("SIGINT", () => {
-  log.info("🛑 SIGINT received — shutting down gracefully...");
-  process.exit(0);
-});
+// ────────────────────────────────────────────────
+// Clean graceful shutdown
+["SIGINT", "SIGTERM"].forEach(sig =>
+  process.on(sig, () => {
+    log.info(`👋 Received ${sig}, shutting down...`);
+    process.exit(0);
+  })
+);
 
-process.on("SIGTERM", () => {
-  log.info("🛑 SIGTERM received — shutting down gracefully...");
-  process.exit(0);
-});
-
-// 🚀 Start Goat Bot now!
-startProject();
+// ────────────────────────────────────────────────
+// Start bot
+startBot();
