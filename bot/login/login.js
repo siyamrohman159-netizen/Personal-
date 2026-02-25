@@ -15,10 +15,16 @@ const path = defaultRequire("path");
 const readline = defaultRequire("readline");
 const fs = defaultRequire("fs-extra");
 const toptp = defaultRequire("totp-generator");
-const { login }= defaultRequire("fca-unofficial");
+
+// এই নতুন লজিকটি সরাসরি পেস্ট করুন
+const fca = defaultRequire("fca-unofficial");
+const login = typeof fca === 'function' ? fca : (fca.login || fca.default || fca);
+
 const qr = new (defaultRequire("qrcode-reader"));
 const Canvas = defaultRequire("canvas");
 const https = defaultRequire("https");
+
+
 
 async function getName(userID) {
         try {
